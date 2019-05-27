@@ -1,0 +1,44 @@
+animal_name,hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,legs,tail,domestic,catsize,class_type
+boa,n,n,y,n,n,n,y,y,y,y,n,n,0,y,n,y,3
+barracuda,n,n,y,n,n,y,y,y,y,n,n,y,0,y,n,y,4
+mosquito,n,n,y,n,y,n,n,n,n,y,n,n,6,n,n,n,6
+anchovy,n,n,y,n,n,y,n,n,y,n,n,y,0,y,n,n,4
+spider,n,n,y,n,n,n,y,y,n,y,y,n,8,n,n,n,7
+jellyfish,n,n,y,n,n,y,n,n,n,n,y,n,0,n,n,y,7
+salamander,n,n,y,n,n,y,n,y,y,y,n,n,4,y,y,n,5
+squid,n,n,y,n,n,y,n,n,n,n,n,n,0,n,n,y,7
+firebelly,n,n,y,n,n,y,n,y,y,y,n,n,4,n,n,n,5
+snail,n,n,y,n,n,n,n,n,n,y,n,n,0,n,n,n,7
+crocodile,n,n,y,n,n,y,y,y,y,y,n,n,4,y,n,y,3
+butterfly,y,n,y,n,y,n,n,n,n,y,n,n,6,n,n,n,6
+adder,n,n,y,n,n,n,y,y,y,y,y,n,0,y,n,y,3
+chameleon,n,n,y,n,n,n,n,y,y,y,n,n,4,y,y,n,3
+siren,n,n,y,n,n,y,n,y,y,y,n,n,2,y,n,n,5
+mantis,n,n,y,n,n,n,y,n,n,y,n,n,6,n,n,n,6
+wart toad,n,n,y,n,n,y,n,y,y,y,n,n,4,n,n,n,5
+hornet,n,n,y,n,y,n,y,n,n,y,y,n,6,n,n,n,6
+dragonfly,n,n,y,n,y,n,n,n,n,y,n,n,6,n,n,n,6
+dart frog,n,n,y,n,n,y,n,y,y,y,n,n,4,n,n,n,5
+mackerel,n,n,y,n,n,y,n,n,y,n,n,y,0,y,n,y,4
+cockroach,n,n,y,n,n,n,n,n,n,y,n,n,6,n,n,n,6
+iguana,n,n,y,n,n,n,y,y,y,y,n,n,4,y,y,y,3
+beetle,n,n,y,n,n,n,n,n,n,y,n,n,6,n,n,n,6
+tree frog,n,n,y,n,n,y,n,y,y,y,n,n,4,n,n,n,5
+cicada,n,n,y,n,y,n,n,n,n,y,n,n,6,n,n,n,6
+silkworm,n,n,y,n,n,n,n,n,n,y,n,n,0,n,n,n,7
+cricket,n,n,y,n,n,n,n,n,n,y,n,n,6,n,n,n,6
+antlion,n,n,y,n,y,n,n,n,n,y,n,n,6,n,n,n,6
+flounder,n,n,y,n,n,y,n,n,y,n,n,y,0,y,n,y,4
+alligator,n,n,y,n,n,y,y,y,y,y,n,n,4,y,n,y,3
+python,n,n,y,n,n,n,y,y,y,y,y,n,0,y,n,y,3
+lizard,n,n,y,n,n,n,y,y,y,y,n,n,4,y,n,n,3
+aphid,n,n,y,n,n,n,n,n,n,y,n,n,6,n,n,n,6
+scallop,n,n,y,n,n,y,n,n,n,n,n,n,0,n,n,n,7
+marlin,n,n,y,n,n,y,n,n,y,n,n,y,0,y,n,y,4
+turtle,n,n,y,n,n,y,n,n,y,y,n,n,4,y,y,y,3
+halibut,n,n,y,n,n,y,n,n,y,n,n,y,0,y,n,y,4
+gecko,n,n,y,n,n,n,n,y,y,y,n,n,4,y,y,n,3
+gharial,n,n,y,n,n,y,y,y,y,y,n,n,4,y,n,y,3
+trout,n,n,y,n,n,y,n,n,y,n,n,y,0,y,n,y,4
+skink,n,n,y,n,n,n,n,y,y,y,n,n,4,y,n,n,3
+palmetto,n,n,y,n,y,n,y,n,n,y,n,n,6,n,n,n,6
