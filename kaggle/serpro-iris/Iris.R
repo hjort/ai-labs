@@ -22,7 +22,7 @@ View(data)
 head(data, 10)
 
 # Assigning meaningful column names
-colnames(data)<-c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width","Species")
+colnames(data)<-c("Id","Sepal.Length","Sepal.Width","Petal.Length","Petal.Width","Species")
 head(data,5)
 
 ################################################################################
@@ -36,12 +36,6 @@ index <- createDataPartition(data$Species, p=0.80, list=FALSE)
 testset <- data[-index,]
 # select 80% of data to train the models
 trainset <- data[index,]
-
-index <- 3
-testset <- data[-index,]
-trainset <- data[index,]
-
-trainset <- data
 
 ################################################################################
 # Explore the Data
@@ -70,7 +64,7 @@ hist(trainset$Sepal.Width)
 
 ## Box plot to understand how the distribution varies by class of flower
 par(mfrow=c(1,4))
-for(i in 1:4) {
+for(i in 2:5) {
   boxplot(trainset[,i], main=names(trainset)[i])
 }
 
@@ -125,35 +119,56 @@ print(facet)
 ################################################################################
 # Getting Started with Machine Learning
 
+#library(caret)
+#install.packages("e1071")
+#library(e1071)
+
 # A) Decision Tree Classifiers
+
+model.rpart <- train(x = trainset[,2:5],
+                 y = trainset[,6],
+                 method = "rpart",
+                 metric = "Accuracy")
+
 print(model.rpart)
 
 plot(model.rpart$finalModel)
 text(model.rpart$finalModel)
 
 ## Predictions on train dataset
-pred<-table(predict(object = model.rpart$finalModel,
-                    newdata = trainset[,1:4],
+pred <- table(predict(object = model.rpart$finalModel,
+                    newdata = trainset[,2:5],
                     type="class"))
 pred
 
 ## Checking the accuracy using a confusion matrix by comparing predictions to actual classifications
 confusionMatrix(predict(object = model.rpart$finalModel,
-                        newdata = trainset[,1:4],
+                        newdata = trainset[,2:5],
                         type="class"),
                 trainset$Species)
 
 ## Checking accuracy on the testdata set we created initially
-pred_test<-predict(object = model.rpart$finalModel,
-                   newdata = testset[,1:4],
+pred_test <- predict(object = model.rpart$finalModel,
+                   newdata = testset[,2:5],
                    type="class")
 confusionMatrix(pred_test, testset$Species)
 
 ################################################################################
 
+#install.packages("randomForest")
+library(randomForest)
+
 # B) Random Forest Algorithm
 
+model.rf <- train(x = trainset[,2:5],
+                     y = trainset[,6],
+                     method = "rf",
+                     metric = "Accuracy")
 print(model.rf)
+
+pred <- table(predict(object = model.rpart$finalModel,
+                      newdata = trainset[,2:5],
+                      type="class"))
 
 confusionMatrix(pred, trainset$Species)
 
@@ -167,10 +182,14 @@ confusionMatrix(pred_test, testset$Species)
 
 # C) Gradient Boosting Method
 
+model.gbm <- train(x = trainset[,2:5],
+                  y = trainset[,6],
+                  method = "gbm",
+                  metric = "Accuracy")
 print(model.gbm)
 
 ## Verify the accuracy on the training set
-pred<-predict(object = model.gbm, newdata = trainset[,1:4])
+pred <- predict(object = model.gbm, newdata = trainset[,2:5])
 confusionMatrix(pred, trainset$Species)
 
 confusionMatrix(pred_test, testset$Species)
@@ -182,7 +201,7 @@ confusionMatrix(pred_test, testset$Species)
 # Since Kmeans is a random start algo, we need to set the seed to ensure reproduceability
 set.seed(20)
 
-irisCluster <- kmeans(iris[, 1:4], centers = 3, nstart = 20)
+irisCluster <- kmeans(iris[, 2:5], centers = 3, nstart = 20)
 irisCluster
 
 # Check the classification accuracy
@@ -195,14 +214,15 @@ points(irisCluster$centers[,c("Sepal.Length", "Sepal.Width")], col=1:3, pch=8, c
 
 # E) Linear Discriminant Analysis
 
-library(caret)
+#library(caret)
 #install.packages("MASS")
-library(MASS)
+#library(MASS)
+
 set.seed(1000)
 
 # Fit the model
-model.lda<-train(x = trainset[,1:4],
-                 y = trainset[,5],
+model.lda <- train(x = trainset[,2:5],
+                 y = trainset[,6],
                  method = "lda",
                  metric = "Accuracy")
 
@@ -210,11 +230,11 @@ model.lda<-train(x = trainset[,1:4],
 print(model.lda)
 
 ## Verify the accuracy on the training set
-pred<-predict(object = model.lda, newdata = trainset[,1:4])
+pred <- predict(object = model.lda, newdata = trainset[,2:5])
 confusionMatrix(pred, trainset$Species)
 
 ## Performance on the test set
-pred_test<-predict(object = model.lda, newdata = testset[,1:4])
+pred_test <- predict(object = model.lda, newdata = testset[,2:5])
 confusionMatrix(pred_test, testset$Species)
 
 ################################################################################
