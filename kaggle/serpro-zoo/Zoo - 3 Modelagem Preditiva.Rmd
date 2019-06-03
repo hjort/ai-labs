@@ -35,15 +35,20 @@ head(train_data2, 5)
 ### Unir ambos os dados de treinamento
 
 ```{r}
-#data = data.append(data2)
+train_data <- merge(train_data, train_data2, all = TRUE)
+
+head(train_data, 5)
 ```
 
 ### Transformar y/n em 0/1
-
+ 
 ```{r}
 # library(data.table)
 # library(mltools)
 # train_data <- one_hot(as.data.table(train_data))
+
+factor_vars = c(2:13,15:17)
+train_data[factor_vars] <- lapply(train_data[factor_vars], function(x) if (x == "y") 1 else 0)
 
 head(train_data, 5)
 
@@ -55,12 +60,26 @@ head(train_data, 5)
 #     data[col] = data[col].map({'n': 0, 'y': 1}).astype(int)
 ```
 
+```{r}
+# train_data[,c(2:18)] = as.factor(train_data[,c(2:18)])
+train_data[c(2:18)] <- lapply(train_data[c(2:18)], function(x) as.factor(x))
+
+head(train_data, 5)
+```
+
 ### Outras transformações
 
 ```{r}
-train_data$class_type = as.factor(train_data$class_type)
+#train_data$class_type = as.factor(train_data$class_type)
+
+factor_vars = c("legs", "class_type")
+train_data[factor_vars] <- lapply(train_data[factor_vars], function(x) as.factor(x))
 
 head(train_data, 5)
+```
+
+```{r}
+str(train_data)
 ```
 
 
@@ -69,6 +88,9 @@ head(train_data, 5)
 ```{r}
 X = train_data[,2:17]
 y = train_data$class_type
+
+print(str(X))
+print(str(y))
 ```
 
 ```{r}
@@ -85,8 +107,8 @@ head(y, 5)
 set.seed(42)
 
 # methods = c("knn")
-methods = c("knn", "svmLinear", "nnet", "mlp", "nb")
-# methods = c("rpart", "rf", "gbm", "lda", "knn", "svmLinear", "nnet", "mlp", "nb")
+methods = c("rpart", "rf", "gbm", "knn", "svmLinear", "nnet", "mlp", "nb", "plr")
+# methods = c("rpart", "rf", "gbm", "lda", "knn", "svmLinear", "nnet", "mlp", "nb", "plr")
 models = list()
 ```
 
@@ -107,12 +129,6 @@ for (method in methods) {
                  metric = "Kappa") #"Accuracy")
   print(model)
   models[[method]] <- model
-  
-  # executar predição e gerar matriz de confusão
-  # y_pred <- predict(object = model, newdata = X_test)
-  # cm = confusionMatrix(y_pred, y_test)
-  # print("Matriz de Confusão:")
-  # print(cm)
 }
 ```
 
