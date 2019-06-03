@@ -1,7 +1,7 @@
 Id,Species
 72,Iris-versicolor
 78,Iris-versicolor
-139,Iris-versicolor
+139,Iris-virginica
 135,Iris-virginica
 27,Iris-setosa
 6,Iris-setosa
@@ -39,7 +39,7 @@ Id,Species
 21,Iris-setosa
 49,Iris-setosa
 92,Iris-versicolor
-69,Iris-versicolor
+69,Iris-virginica
 100,Iris-versicolor
 84,Iris-virginica
 76,Iris-versicolor

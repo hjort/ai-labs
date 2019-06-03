@@ -1,5 +1,6 @@
 ################################################################################
 # Importar as bibliotecas necessárias
+# Vide: https://cran.r-project.org/web/packages/caret/
 
 library(caret)
 
@@ -21,25 +22,28 @@ head(train_data, 5)
 # Dividir os dados entre treino e teste
 
 # 70% para treino, 30% para teste
-index <- createDataPartition(train_data$Species, p=0.70, list=FALSE)
-
-testset <- train_data[-index,]
-trainset <- train_data[index,]
+# index <- createDataPartition(train_data$Species, p=0.70, list=FALSE)
+# 
+# testset <- train_data[-index,]
+# trainset <- train_data[index,]
 
 ################################################################################
 # Selecionar os dados de treino e teste
 
-X_train = trainset[,2:5]
-y_train = trainset$Species
-X_test = testset[,2:5]
-y_test = testset$Species
+# X_train = trainset[,2:5]
+# y_train = trainset$Species
+# X_test = testset[,2:5]
+# y_test = testset$Species
+
+X = train_data[,2:5]
+y = train_data$Species
 
 ################################################################################
 # Definir algoritmos a serem usados
 
 set.seed(42)
 
-# methods = c("nb")
+# methods = c("knn")
 methods = c("rpart", "rf", "gbm", "lda", "knn", "svmLinear", "nnet", "mlp", "nb")
 models = list()
 
@@ -53,22 +57,25 @@ for (method in methods) {
   train_control <- trainControl(method="cv", number=10)
   
   # treinar o modelo preditivo
-  model <- train(x = X_train,
-                 y = y_train,
+  model <- train(x = X, #X_train,
+                 y = y, #y_train,
                  method = method,
                  trControl = train_control,
-                 metric = "Accuracy")
+                 metric = "Kappa") #"Accuracy")
   print(model)
   models[[method]] <- model
   
   # executar predição e gerar matriz de confusão
-  y_pred <- predict(object = model, newdata = X_test)
-  cm = confusionMatrix(y_pred, y_test)
-  print("Matriz de Confusão:")
-  print(cm)
+  # y_pred <- predict(object = model, newdata = X_test)
+  # cm = confusionMatrix(y_pred, y_test)
+  # print("Matriz de Confusão:")
+  # print(cm)
 }
 
+################################################################################
 # Exibir os resultados de cada algoritmo
+# Vide: https://machinelearningmastery.com/machine-learning-evaluation-metrics-in-r/
+
 results <- resamples(models)
 summary(results)
 dotplot(results)
