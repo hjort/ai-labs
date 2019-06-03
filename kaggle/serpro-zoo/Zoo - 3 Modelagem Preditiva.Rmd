@@ -1,0 +1,155 @@
+---
+title: "Zoo - 3 Modelagem Preditiva"
+output: html_notebook
+---
+
+## Importar as bibliotecas necessárias
+
+Vide: https://cran.r-project.org/web/packages/caret/
+
+```{r}
+library(caret)
+# library(rpart)
+# library(randomForest)
+# library(gbm)
+# library(MASS)
+# library(kernlab)
+# library(RSNNS)
+# library(klaR)
+```
+
+## Carregar os dados de treino
+
+```{r}
+train_data <- read.csv(file = "zoo-train.csv", header = TRUE, sep = ",")
+head(train_data, 5)
+```
+
+### Carga dos dados adicionais
+
+```{r}
+train_data2 <- read.csv(file = "zoo-train2.csv", header = TRUE, sep = ",")
+head(train_data2, 5)
+```
+
+### Unir ambos os dados de treinamento
+
+```{r}
+#data = data.append(data2)
+```
+
+### Transformar y/n em 0/1
+
+```{r}
+# library(data.table)
+# library(mltools)
+# train_data <- one_hot(as.data.table(train_data))
+
+head(train_data, 5)
+
+# bool_cols = data.columns.values.tolist()
+# bool_cols.remove('legs')
+# bool_cols.remove('class_type')
+# 
+# for col in bool_cols:
+#     data[col] = data[col].map({'n': 0, 'y': 1}).astype(int)
+```
+
+### Outras transformações
+
+```{r}
+train_data$class_type = as.factor(train_data$class_type)
+
+head(train_data, 5)
+```
+
+
+### Definir dados de entrada
+
+```{r}
+X = train_data[,2:17]
+y = train_data$class_type
+```
+
+```{r}
+head(X, 5)
+```
+
+```{r}
+head(y, 5)
+```
+
+## Definir algoritmos a serem usados
+
+```{r}
+set.seed(42)
+
+# methods = c("knn")
+methods = c("knn", "svmLinear", "nnet", "mlp", "nb")
+# methods = c("rpart", "rf", "gbm", "lda", "knn", "svmLinear", "nnet", "mlp", "nb")
+models = list()
+```
+
+## Treinar modelos com diferentes algoritmos
+
+```{r}
+for (method in methods) {
+  print(paste("Treinando o algoritmo", toupper(method), "..."))
+  
+  # K-Fold cross-validation
+  train_control <- trainControl(method="cv", number=10)
+  
+  # treinar o modelo preditivo
+  model <- train(x = X, #X_train,
+                 y = y, #y_train,
+                 method = method,
+                 trControl = train_control,
+                 metric = "Kappa") #"Accuracy")
+  print(model)
+  models[[method]] <- model
+  
+  # executar predição e gerar matriz de confusão
+  # y_pred <- predict(object = model, newdata = X_test)
+  # cm = confusionMatrix(y_pred, y_test)
+  # print("Matriz de Confusão:")
+  # print(cm)
+}
+```
+
+## Exibir os resultados de cada algoritmo
+
+Vide: https://machinelearningmastery.com/machine-learning-evaluation-metrics-in-r/
+
+```{r}
+results <- resamples(models)
+summary(results)
+dotplot(results)
+```
+
+## Carregar os dados de avaliação (teste)
+
+```{r}
+test_data <- read.csv(file = "zoo-test.csv", header = TRUE, sep = ",")
+head(test_data, 5)
+```
+
+## Gerar arquivos de envio para todos os algoritmos selecionados
+
+```{r}
+for (method in names(models)) {
+  model <- models[method]
+  print(paste("Gerando arquivo para o algoritmo", toupper(method), "..."))
+  
+  # Prever os resultados usando o modelo já treinado
+  y_pred <- predict(object = model, newdata = test_data[,2:17])
+  names(y_pred) <- c("class_type")
+  
+  # Preparar o arquivo de envio
+  submission <- data.frame("animal_name" = test_data$animal_name, y_pred)
+  write.csv(submission,
+            file = paste("zoo-submission-r-", method, ".csv", sep = ""), 
+            quote = FALSE, 
+            row.names = FALSE)
+}
+```
+
