@@ -15,6 +15,8 @@ install.packages("tidyr")
 # Read the file into the R environment
 data <- read.csv(file = "iris-train.csv", header = TRUE, sep = ",")
 
+class(data)
+
 # View the data
 View(data)
 
@@ -22,7 +24,7 @@ View(data)
 head(data, 10)
 
 # Assigning meaningful column names
-colnames(data)<-c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width","Species")
+colnames(data)<-c("Id","Sepal.Length","Sepal.Width","Petal.Length","Petal.Width","Species")
 head(data,5)
 
 ################################################################################
@@ -31,17 +33,11 @@ head(data,5)
 # Load the Caret package which allows us to partition the data
 library(caret)
 # We use the dataset to create a partition (80% training 20% testing)
-index <- createDataPartition(data$Species, p=0.80, list=FALSE)
+index <- createDataPartition(data$Species, p=0.70, list=FALSE)
 # select 20% of the data for testing
 testset <- data[-index,]
 # select 80% of data to train the models
 trainset <- data[index,]
-
-index <- 3
-testset <- data[-index,]
-trainset <- data[index,]
-
-trainset <- data
 
 ################################################################################
 # Explore the Data
@@ -59,6 +55,11 @@ summary(trainset)
 
 # Levels of the prediction column
 levels(trainset$Species)
+
+dim(testset)
+str(testset)
+summary(testset)
+levels(testset$Species)
 
 ################################################################################
 # Visualization and Exploration
@@ -197,12 +198,14 @@ points(irisCluster$centers[,c("Sepal.Length", "Sepal.Width")], col=1:3, pch=8, c
 
 library(caret)
 #install.packages("MASS")
+install.packages("e1071")
+
 library(MASS)
 set.seed(1000)
 
 # Fit the model
-model.lda<-train(x = trainset[,1:4],
-                 y = trainset[,5],
+model.lda<-train(x = trainset[,2:5],
+                 y = trainset[,6],
                  method = "lda",
                  metric = "Accuracy")
 
@@ -210,12 +213,22 @@ model.lda<-train(x = trainset[,1:4],
 print(model.lda)
 
 ## Verify the accuracy on the training set
-pred<-predict(object = model.lda, newdata = trainset[,1:4])
-confusionMatrix(pred, trainset$Species)
+pred<-predict(object = model.lda, newdata = testset[,2:5])
+confusionMatrix(pred, testset$Species)
 
 ## Performance on the test set
 pred_test<-predict(object = model.lda, newdata = testset[,1:4])
 confusionMatrix(pred_test, testset$Species)
+
+
+testdata <- read.csv(file = "iris-test.csv", header = TRUE, sep = ",")
+colnames(testdata)<-c("Id","Sepal.Length","Sepal.Width","Petal.Length","Petal.Width")
+head(testdata,5)
+
+pred_test<-predict(object = model.lda, newdata = testdata[,2:5])
+
+View(pred_test)
+class(pred_test)
 
 ################################################################################
 # Summarizing the Models
