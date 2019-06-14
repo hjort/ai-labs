@@ -1,0 +1,171 @@
+---
+title: "Zoo - 3 Modelagem Preditiva"
+output: html_notebook
+---
+
+## Importar as bibliotecas necessárias
+
+Vide: https://cran.r-project.org/web/packages/caret/
+
+```{r}
+library(caret)
+# library(rpart)
+# library(randomForest)
+# library(gbm)
+# library(MASS)
+# library(kernlab)
+# library(RSNNS)
+# library(klaR)
+```
+
+## Carregar os dados de treino
+
+```{r}
+train_data <- read.csv(file = "zoo-train.csv", header = TRUE, sep = ",")
+head(train_data, 5)
+```
+
+### Carga dos dados adicionais
+
+```{r}
+train_data2 <- read.csv(file = "zoo-train2.csv", header = TRUE, sep = ",")
+head(train_data2, 5)
+```
+
+### Unir ambos os dados de treinamento
+
+```{r}
+train_data <- merge(train_data, train_data2, all = TRUE)
+
+head(train_data, 5)
+```
+
+### Transformar y/n em 0/1
+ 
+```{r}
+# library(data.table)
+# library(mltools)
+# train_data <- one_hot(as.data.table(train_data))
+
+factor_vars = c(2:13,15:17)
+train_data[factor_vars] <- lapply(train_data[factor_vars], function(x) if (x == "y") 1 else 0)
+
+head(train_data, 5)
+
+# bool_cols = data.columns.values.tolist()
+# bool_cols.remove('legs')
+# bool_cols.remove('class_type')
+# 
+# for col in bool_cols:
+#     data[col] = data[col].map({'n': 0, 'y': 1}).astype(int)
+```
+
+```{r}
+# train_data[,c(2:18)] = as.factor(train_data[,c(2:18)])
+train_data[c(2:18)] <- lapply(train_data[c(2:18)], function(x) as.factor(x))
+
+head(train_data, 5)
+```
+
+### Outras transformações
+
+```{r}
+#train_data$class_type = as.factor(train_data$class_type)
+
+factor_vars = c("legs", "class_type")
+train_data[factor_vars] <- lapply(train_data[factor_vars], function(x) as.factor(x))
+
+head(train_data, 5)
+```
+
+```{r}
+str(train_data)
+```
+
+
+### Definir dados de entrada
+
+```{r}
+X = train_data[,2:17]
+y = train_data$class_type
+
+print(str(X))
+print(str(y))
+```
+
+```{r}
+head(X, 5)
+```
+
+```{r}
+head(y, 5)
+```
+
+## Definir algoritmos a serem usados
+
+```{r}
+set.seed(42)
+
+# methods = c("knn")
+methods = c("rpart", "rf", "gbm", "knn", "svmLinear", "nnet", "mlp", "nb", "plr")
+# methods = c("rpart", "rf", "gbm", "lda", "knn", "svmLinear", "nnet", "mlp", "nb", "plr")
+models = list()
+```
+
+## Treinar modelos com diferentes algoritmos
+
+```{r}
+for (method in methods) {
+  print(paste("Treinando o algoritmo", toupper(method), "..."))
+  
+  # K-Fold cross-validation
+  train_control <- trainControl(method="cv", number=10)
+  
+  # treinar o modelo preditivo
+  model <- train(x = X, #X_train,
+                 y = y, #y_train,
+                 method = method,
+                 trControl = train_control,
+                 metric = "Kappa") #"Accuracy")
+  print(model)
+  models[[method]] <- model
+}
+```
+
+## Exibir os resultados de cada algoritmo
+
+Vide: https://machinelearningmastery.com/machine-learning-evaluation-metrics-in-r/
+
+```{r}
+results <- resamples(models)
+summary(results)
+dotplot(results)
+```
+
+## Carregar os dados de avaliação (teste)
+
+```{r}
+test_data <- read.csv(file = "zoo-test.csv", header = TRUE, sep = ",")
+head(test_data, 5)
+```
+
+## Gerar arquivos de envio para todos os algoritmos selecionados
+
+```{r}
+for (method in names(models)) {
+  model <- models[method]
+  print(paste("Gerando arquivo para o algoritmo", toupper(method), "..."))
+  
+  # Prever os resultados usando o modelo já treinado
+  y_pred <- predict(object = model, newdata = test_data[,2:17])
+  names(y_pred) <- c("class_type")
+  
+  # Preparar o arquivo de envio
+  submission <- data.frame("animal_name" = test_data$animal_name, y_pred)
+  write.csv(submission,
+            file = paste("zoo-submission-r-", method, ".csv", sep = ""), 
+            quote = FALSE, 
+            row.names = FALSE)
+}
+```
+
