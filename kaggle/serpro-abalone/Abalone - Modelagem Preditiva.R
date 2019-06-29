@@ -1,16 +1,9 @@
 ## Importar as bibliotecas necessárias
 # Vide: https://cran.r-project.org/web/packages/caret/
 library(caret)
-# library(rpart)
-# library(randomForest)
-# library(gbm)
-# library(MASS)
-# library(kernlab)
-# library(RSNNS)
-# library(klaR)
 
 ## Carregar os dados de treino
-train_data <- read.csv(file = "abalone-train.csv", header = TRUE, sep = ",", row.names = 'id')
+train_data <- read.csv(file = "abalone-train.csv", header = TRUE, sep = ",", row.names = "id")
 head(train_data, 5)
 str(train_data)
 
@@ -45,8 +38,8 @@ for (method in methods) {
   train_control <- trainControl(method="cv", number=10)
   
   # treinar o modelo preditivo
-  model <- train(x = X, #X_train,
-                 y = y, #y_train,
+  model <- train(x = X,
+                 y = y,
                  method = method,
                  trControl = train_control,
                  metric = "RMSE")
@@ -71,13 +64,13 @@ for (method in names(models)) {
   print(paste("Gerando arquivo para o algoritmo", toupper(method), "..."))
   
   # Prever os resultados usando o modelo já treinado
-  y_pred <- predict(object = model, newdata = test_data[,2:17])
-  names(y_pred) <- c("class_type")
+  y_pred <- predict(object = model, newdata = test_data)
+  names(y_pred) <- c("rings")
   
   # Preparar o arquivo de envio
-  submission <- data.frame("animal_name" = test_data$animal_name, y_pred)
+  submission <- data.frame("id" = row.names(test_data), y_pred)
   write.csv(submission,
-            file = paste("submission/abalone-submission-r-", method, ".csv", sep = ""), 
-            quote = FALSE, 
-            row.names = "id")
+            file = paste("submissions/abalone-submission-r-", method, ".csv", sep = ""), 
+            quote = FALSE,
+            row.names = FALSE)
 }

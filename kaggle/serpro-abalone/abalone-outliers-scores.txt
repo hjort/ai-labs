@@ -1,0 +1,368 @@
+o0
+Model	Score	Std Dev	Time (ms)
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.031983	0	13556
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.056330	0	34380
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.084522	0	1038
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.101305	0	2033
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.108245	0	2916
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.117164	0	5689
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.130020	0	416
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.163615	0	7695
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.174379	0	8774
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.182189	0	23
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.183960	0	2110
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.191796	0	53
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.192325	0	56
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.208977	0	675
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.231502	0	2195
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.250374	0	8437
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.391605	0	87
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.441148	0	53
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	4.039379	0	445
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.764460	0	256
+
+o1
+	Model	Score	Std Dev	Time (ms)
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.021990	0	25078
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.063034	0	10895
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.096407	0	1949
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.111179	0	1154
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.112090	0	2471
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.133355	0	4657
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.156311	0	7934
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.179230	0	5454
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.181779	0	38
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.187849	0	89
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.189029	0	1309
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.192292	0	43
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.198454	0	6923
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.204889	0	61
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.208280	0	318
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.275345	0	2014
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.292805	0	559
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.407664	0	55
+10	GaussianNB(priors=None, var_smoothing=0.1)	2.866997	0	360
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	3.923808	0	284
+
+o1b
+Model	Score	Std Dev	Time (ms)
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.043173	0	14376
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.078144	0	31861
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.090613	0	3652
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.110021	0	2400
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.121397	0	1919
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.124412	0	5469
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.154017	0	288
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.165781	0	5737
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.177637	0	3360
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.178997	0	10102
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.185340	0	51
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.198380	0	32
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.199334	0	47
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.224608	0	675
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.236916	0	2088
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.241383	0	14827
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.242830	0	84
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.472903	0	37
+10	GaussianNB(priors=None, var_smoothing=0.1)	2.911842	0	62
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	4.400042	0	310
+
+o1c
+Model	Score	Std Dev	Time (ms)
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.032238	0	12381
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.033774	0	26195
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.090754	0	1992
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.094500	0	1208
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.111017	0	2412
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.123402	0	5043
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.129766	0	266
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.163724	0	5751
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.178173	0	8430
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.180108	0	1341
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.188745	0	21
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.199070	0	8888
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.202392	0	51
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.203130	0	58
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.205017	0	808
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.218899	0	90
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.229229	0	2162
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.441660	0	40
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	3.979127	0	382
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.831814	0	84
+
+o1d
+Model	Score	Std Dev	Time (ms)
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.031172	0	12203
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.036115	0	54888
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.103864	0	1466
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.110475	0	3943
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.114675	0	2017
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.122127	0	8302
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.129855	0	282
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.164185	0	6061
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.165778	0	8671
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.186971	0	85
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.187528	0	1571
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.189611	0	47
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.203693	0	93
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.204439	0	366
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.208376	0	689
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.229803	0	2278
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.260717	0	10840
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.441598	0	40
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	2.815708	0	402
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.796873	0	139
+
+o1e
+Model	Score	Std Dev	Time (ms)
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.028076	0	28134
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.031172	0	15765
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.103864	0	625
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.110475	0	2405
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.114675	0	1954
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.122127	0	4931
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.129855	0	265
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.164185	0	5830
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.165778	0	8507
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.186971	0	90
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.187528	0	2135
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.189611	0	32
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.203693	0	120
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.204439	0	474
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.208376	0	769
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.229803	0	2179
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.260717	0	6857
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.441598	0	42
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	2.815708	0	450
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.796873	0	83
+
+o2
+Model	Score	Std Dev	Time (ms)
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.049969	0	11614
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.079807	0	25181
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.103320	0	1939
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.117998	0	1217
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.118885	0	4757
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.130334	0	2548
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.142112	0	317
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.164113	0	5694
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.166424	0	115
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.184818	0	1603
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.195461	0	35
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.203241	0	8308
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.204409	0	809
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.211820	0	87
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.212702	0	97
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.231361	0	2129
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.295911	0	6867
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.457716	0	48
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	3.651254	0	344
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.527520	0	460
+
+o3
+	Model	Score	Std Dev	Time (ms)
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.038288	0	28654
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.115269	0	4636
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.120169	0	1113
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.121354	0	1921
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.139615	0	2544
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.144486	0	11833
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.152416	0	280
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.166104	0	6008
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.178667	0	8219
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.189011	0	1354
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.197052	0	46
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.211287	0	50
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.213660	0	40
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.227305	0	631
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.227677	0	2055
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.290026	0	7040
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.344301	0	87
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.459732	0	56
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	3.929749	0	306
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.527131	0	339
+
+o4
+Model	Score	Std Dev	Time (ms)
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.100431	0	11405
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.121164	0	26135
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.125713	0	2420
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.129603	0	1921
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.132220	0	4868
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.132627	0	1109
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.142488	0	282
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.159512	0	5703
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.173957	0	92
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.205196	0	22
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.206009	0	8118
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.206067	0	1221
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.213474	0	748
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.230651	0	2060
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.233221	0	71
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.233362	0	93
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.264931	0	6860
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.416593	0	39
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	2.915045	0	357
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.252559	0	311
+
+o5
+Model	Score	Std Dev	Time (ms)
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.043742	0	25181
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.092185	0	1904
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.124492	0	1180
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.131921	0	2427
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.138136	0	4637
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.145334	0	317
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.164444	0	5500
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.187220	0	1736
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.189514	0	8019
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.195036	0	61
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.200969	0	47
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.213222	0	732
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.218917	0	56
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.219169	0	75
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.223518	0	2098
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.243322	0	11027
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.285010	0	6965
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.440601	0	38
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	3.678774	0	356
+10	GaussianNB(priors=None, var_smoothing=0.1)	4.788416	0	128
+
+o6
+	Model	Score	Std Dev	Time (ms)
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.032371	0	27697
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.067069	0	10901
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.111098	0	1150
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.127449	0	2444
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.132083	0	330
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.136612	0	5867
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.138962	0	1958
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.161255	0	5403
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.186888	0	1259
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.190400	0	25
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.194917	0	8137
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.206032	0	56
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.206294	0	122
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.216198	0	82
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.217636	0	671
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.227750	0	2046
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.228242	0	8140
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.426995	0	37
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	2.764637	0	335
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.746749	0	358
+
+o7
+Model	Score	Std Dev	Time (ms)
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.106679	0	25983
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.131597	0	10988
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.136251	0	1173
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.143656	0	4788
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.149727	0	326
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.164702	0	5345
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.179124	0	1374
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.187134	0	2458
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.197253	0	42
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.206450	0	775
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.213407	0	44
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.214875	0	86
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.215379	0	2063
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.223008	0	2053
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.276791	0	8112
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.312677	0	83
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.459070	0	47
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.505140	0	7921
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	4.030839	0	365
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.604198	0	319
+
+o8
+Model	Score	Std Dev	Time (ms)
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.117292	0	24916
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.123009	0	4623
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.130854	0	11366
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.133582	0	1133
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.159858	0	324
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.164720	0	5416
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.167175	0	98
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.185115	0	2429
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.196308	0	1335
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.197794	0	42
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.213340	0	91
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.214661	0	720
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.214965	0	42
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.221847	0	2075
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.281439	0	1870
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.317873	0	6934
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.320822	0	8110
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.459975	0	38
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	3.520935	0	341
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.516210	0	332
+
+o9
+Model	Score	Std Dev	Time (ms)
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.083682	0	11401
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.129854	0	26605
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.138565	0	2441
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.142904	0	4671
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.156938	0	1363
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.157737	0	278
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.165375	0	5351
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.206334	0	8289
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.209484	0	747
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.212316	0	1929
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.219137	0	1244
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.220873	0	62
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.222930	0	2021
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.223063	0	91
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.248704	0	39
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.249563	0	225
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.261422	0	6933
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.440428	0	37
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	4.728372	0	351
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.130179	0	127
+
+o10
+Model	Score	Std Dev	Time (ms)
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.070362	0	10904
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.125096	0	4641
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.143155	0	1130
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.143925	0	319
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.144453	0	2446
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.164129	0	83
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.165394	0	5531
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.181508	0	24749
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.183297	0	1933
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.210424	0	765
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.212670	0	8244
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.221816	0	1218
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.223435	0	2010
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.226276	0	21
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.257201	0	80
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.259074	0	64
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.265595	0	6856
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.419395	0	51
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	3.924082	0	321
+10	GaussianNB(priors=None, var_smoothing=0.1)	5.163653	0	318
+
+o11
+Model	Score	Std Dev	Time (ms)
+8	GaussianProcessRegressor(alpha=0.01, copy_X_tr...	2.042918	0	14850
+13	MLPRegressor(activation='logistic', alpha=0.00...	2.046248	0	36684
+15	([DecisionTreeRegressor(criterion='friedman_ms...	2.057278	0	1931
+14	(DecisionTreeRegressor(criterion='mse', max_de...	2.066394	0	2632
+19	XGBRegressor(base_score=0.5, booster='gbtree',...	2.073840	0	1259
+16	(ExtraTreeRegressor(criterion='mse', max_depth...	2.083071	0	5726
+18	(DecisionTreeRegressor(criterion='mse', max_de...	2.088494	0	8038
+17	(DecisionTreeRegressor(criterion='mse', max_de...	2.123855	0	7573
+11	KNeighborsRegressor(algorithm='auto', leaf_siz...	2.161937	0	278
+9	KernelRidge(alpha=1, coef0=1, degree=3, gamma=...	2.164354	0	7366
+5	Ridge(alpha=0.1, copy_X=True, fit_intercept=Fa...	2.167598	0	33
+0	LinearRegression(copy_X=True, fit_intercept=Tr...	2.176904	0	45
+4	RANSACRegressor(base_estimator=None, is_data_v...	2.190321	0	1370
+1	OrthogonalMatchingPursuit(fit_intercept=True, ...	2.190770	0	60
+2	PassiveAggressiveRegressor(C=0.1, average=Fals...	2.231913	0	47
+6	SGDRegressor(alpha=1e-06, average=False, early...	2.244556	0	627
+12	SVR(C=1.0, cache_size=200, coef0=0.0, degree=3...	2.256020	0	2077
+7	DecisionTreeRegressor(criterion='mse', max_dep...	2.475348	0	37
+3	Perceptron(alpha=1e-06, class_weight=None, ear...	2.988492	0	245
+10	GaussianNB(priors=None, var_smoothing=0.1)	3.444983	0	106
+
