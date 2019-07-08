@@ -324,7 +324,7 @@ person,survived
 879,no
 183,no
 518,no
-749,yes
+749,no
 1067,yes
 766,no
 951,no
@@ -409,7 +409,7 @@ person,survived
 548,yes
 153,yes
 750,no
-943,yes
+943,no
 438,yes
 98,yes
 1137,no
@@ -420,7 +420,7 @@ person,survived
 502,yes
 482,yes
 5,no
-1008,yes
+1008,no
 415,yes
 106,no
 99,yes

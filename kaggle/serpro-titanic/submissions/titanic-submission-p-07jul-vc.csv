@@ -55,10 +55,10 @@ person,survived
 349,yes
 486,no
 1055,no
-687,yes
+687,no
 324,yes
 561,no
-1153,yes
+1153,no
 36,yes
 1215,no
 983,no
@@ -131,7 +131,7 @@ person,survived
 840,yes
 684,yes
 869,no
-759,yes
+759,no
 377,yes
 387,yes
 406,no
@@ -194,7 +194,7 @@ person,survived
 41,yes
 386,no
 812,no
-903,yes
+903,no
 255,yes
 182,yes
 835,no
@@ -204,7 +204,7 @@ person,survived
 1258,yes
 282,yes
 760,no
-870,yes
+870,no
 7,no
 1225,no
 1257,yes
@@ -235,7 +235,7 @@ person,survived
 1237,no
 842,no
 736,no
-785,yes
+785,no
 214,yes
 846,no
 892,no
@@ -324,7 +324,7 @@ person,survived
 879,no
 183,no
 518,no
-749,yes
+749,no
 1067,yes
 766,no
 951,no
@@ -332,7 +332,7 @@ person,survived
 776,no
 1054,yes
 352,yes
-1263,yes
+1263,no
 1154,no
 625,no
 72,yes
@@ -409,7 +409,7 @@ person,survived
 548,yes
 153,yes
 750,no
-943,yes
+943,no
 438,yes
 98,yes
 1137,no
@@ -420,7 +420,7 @@ person,survived
 502,yes
 482,yes
 5,no
-1008,yes
+1008,no
 415,yes
 106,no
 99,yes
