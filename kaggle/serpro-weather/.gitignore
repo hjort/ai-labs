@@ -1,2 +1,3 @@
 .ipynb_checkpoints/
 weather-solution.csv
+*.pickle
