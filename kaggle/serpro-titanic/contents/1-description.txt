@@ -1,0 +1,19 @@
+# Descrição da competição
+
+O <a href="https://pt.wikipedia.org/wiki/Naufr%C3%A1gio_do_RMS_Titanic">**naufrágio do RMS Titanic**</a> é um dos mais infames da história. Em 15 de abril de 1912, durante sua viagem inaugural, o Titanic afundou depois de colidir com um iceberg, **matando 1.502 dos 2.224 passageiros e tripulantes**. Essa tragédia chocou a comunidade internacional e levou a melhores normas de segurança para os navios.
+
+![enter image description here][1]
+
+Uma das razões pelas quais o naufrágio causou tamanha perda de vidas foi que não havia botes salva-vidas suficientes para os passageiros e a tripulação. Embora houvesse algum elemento de sorte envolvido na sobrevivência do naufrágio, **alguns grupos de pessoas tinham maior probabilidade de sobreviver do que outros**, tais como mulheres, crianças e a "classe alta".
+
+Neste desafio, você aplicará ferramentas de aprendizado de máquina para **prever quais passageiros sobreviveram à tragédia**.
+
+# Sobre o conjunto de dados
+
+O conjunto de dados **Titanic** consiste de informações demográficas e de viagem de **1.309 passageiros do Titanic**, contendo especialmente a informação binária: sobreviveu ou não.
+
+O objetivo deste conjunto de dados é **prever se cada um dos passageiros informados sobreviveu ou não ao naufrágio**.
+
+Os dados do Titanic contêm uma mistura de variáveis textuais, booleanas e numéricas (tanto contínuas quanto categóricas). Analisá-los necessita realizar tratamentos importantes em mineração de dados, tais como valores ausentes, valores discrepantes (*outliers*) e extrair valor em variáveis textuais. Trata-se de um banco de dados rico que nos permitirá aplicar diversas transformações de dados para o aprendizado de máquina.
+
+  [1]: https://upload.wikimedia.org/wikipedia/commons/6/6e/St%C3%B6wer_Titanic.jpg

@@ -1,0 +1,19 @@
+# Objetivo
+
+É seu trabalho **prever se um passageiro sobreviveu ou não ao naufrágio do Titanic**.
+Para cada registro do conjunto de testes, você deve prever um valor "sim" (`yes`) ou "não" (`no`) para a variável.
+
+# Métrica
+
+Sua pontuação é a **porcentagem de passageiros que você prevê corretamente**. Isso é conhecido simplesmente como precisão.
+
+# Formato de arquivo de submissão
+
+Você deve enviar um arquivo CSV com exatamente 437 entradas mais uma linha de cabeçalho (*header*). Seu envio mostrará um erro se você tiver linhas ou colunas diferentes do esperado.
+
+O arquivo deve ter exatamente 2 colunas:
+
+- `person`: Identificação do passageiro, classificado em qualquer ordem
+- `survived`: A respectiva previsão: `yes` para sobreviventes, `no` para mortos
+
+Você pode fazer o download de um arquivo de envio de exemplo (`titanic-example.csv`) na <a href="https://www.kaggle.com/c/serpro-titanic/data">página de dados</a>.

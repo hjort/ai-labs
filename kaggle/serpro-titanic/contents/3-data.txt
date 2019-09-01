@@ -1,0 +1,36 @@
+Os dados foram divididos em dois grupos:
+
+- **conjunto de treinamento** (`titanic-train.csv`)
+- **conjunto de testes** (`titanic-test.csv`)
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, se o passageiro sobreviveu - campo `survived`). Seu modelo preditivo será baseado nos atributos ou *features* (neste caso, as informações pessoais e da viagem do passageiro).
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, se o passageiro sobreviveu ou não). É seu trabalho predizer esses resultados. Para cada observação do teste, use o modelo que você treinou para prever quais passageiros sobreviveram ao naufrágio.
+
+Também incluímos o arquivo `titanic-example.csv`, um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `person` (identificação do passageiro) e `survived` (se sobrevivente ou não).
+
+## Colunas disponíveis
+
+As colunas neste conjunto de dados são:
+
+- `person`: Identificação única do passageiro no conjunto de dados
+- `pclass`: Classe econômica do passageiro (`1`: primeira, `2`: segunda ou `3`: terceira)
+- `survived`: Indica se o passageiro sobreviveu (`yes`) ou não (`no`) ao naufrágio
+- `name`: Um campo rico em informações, pois contém títulos e nomes de família
+- `sex`: Masculino (`male`) ou feminino (`female`)
+- `age`: Idade (em anos) - estimada caso esteja na forma `xx.5`
+- `sibsp`: Número de irmãos / cônjuges a bordo
+- `parch`: Número de pais / filhos a bordo
+- `ticket`: Número do bilhete
+- `fare`: Tarifa paga pelo passageiro (em libras esterlinas)
+- `cabin`: Localização da cabine no navio
+- `embarked`: Porto de embarque (`C`: Cherbourg, `Q`: Queenstown ou `S`: Southampton)
+- `home_destination`: Residência e destino do passageiro
+
+
+Um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `person` (identificação do passageiro) e `survived` (se sobrevivente ou não). 
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, se o passageiro sobreviveu ou não).
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, se o passageiro sobreviveu - campo `survived`).
+

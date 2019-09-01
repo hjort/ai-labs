@@ -1,0 +1,30 @@
+## Uma conta por participante
+
+Você não pode se inscrever no Kaggle de várias contas e, portanto, não pode enviar de várias contas.
+
+## Nenhum compartilhamento privado fora das equipes
+
+O compartilhamento privado de código ou dados fora das equipes não é permitido. Não há problema em compartilhar código se estiver disponível para todos os participantes nos fóruns.
+
+## Limites de equipe
+
+O tamanho máximo de equipe é de 1 membro.
+
+## Limites de submissão
+
+- Você pode enviar no máximo 10 resultados por dia.
+- Você pode selecionar até 2 submissões finais para o julgamento.
+
+## Cronograma da competição
+
+- Data de início: 01/07/2019
+- Prazo de inscrição: nenhum
+- Data de término: nenhuma
+
+## Propósito
+
+Esta é uma competição divertida que visa ajudar você a começar no aprendizado de máquina. Embora o conjunto de dados esteja publicamente disponível na Internet, procurar respostas prontas acaba com todo o propósito. Ou seja, não faça isso. :D
+
+- Não trapaceie!
+- Aplique-se!
+- Divirta-se!
