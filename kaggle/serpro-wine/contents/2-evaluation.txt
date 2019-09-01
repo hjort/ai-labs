@@ -1,0 +1,34 @@
+# Objetivo
+
+É seu trabalho **prever a qualidade de vinhos** portugueses a partir de suas respectivas **características físico-químicas**. Para cada registro do conjunto de testes, você deve prever um valor `good` (bom) ou `bad` (ruim) para a variável.
+
+# Métrica
+
+A métrica de avaliação nesta competição será o **Escore F1 Médio** (_F1-Score_). O escore F1 combina precisão (_precision_) e revocação (_recall_) de modo a trazer um número único que indique a qualidade geral do modelo e funciona bem mesmo com conjuntos de dados que possuem classes desproporcionais.
+
+**Precisão** (_p_) é a razão entre os positivos verdadeiros (_tp_) e todos os positivos previstos (_tp + fp_). **Revocação** (_r_) é a proporção de positivos verdadeiros (_tp_) para todos os positivos reais (_tp + fn_).
+
+O cálculo de F1 é dado por:
+
+<p>
+\[ F1 = 2\frac{p \cdot r}{p+r}\ \ \mathrm{, onde}\ \ p = \frac{tp}{tp+fp},\ \ r = \frac{tp}{tp+fn} \]
+</p>
+
+Quanto maior o valor de F1, melhor será o modelo preditivo.
+
+Maiores informações sobre o **escore F1**:
+
+- https://en.wikipedia.org/wiki/F1_score
+- https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9
+- https://medium.com/as-m%C3%A1quinas-que-pensam/m%C3%A9tricas-comuns-em-machine-learning-como-analisar-a-qualidade-de-chat-bots-inteligentes-m%C3%A9tricas-1ba580d7cc96
+
+# Formato do arquivo de submissão
+
+Você deve enviar um arquivo CSV com exatamente 1.633 registros mais uma linha de cabeçalho (*header*). Seu envio mostrará um erro se você tiver linhas ou colunas extras.
+
+O arquivo deve ter exatamente 2 colunas:
+
+- `wine` (Integer): número inteiro que identifica o vinho
+- `quality` (String): a qualidade prevista, podendo ser `good` (bom) ou `bad` (ruim)
+
+Você pode fazer o download de um arquivo de envio de exemplo (`wine-example.csv`) na <a href="https://www.kaggle.com/c/serpro-wine/data">página de dados</a>.

@@ -1,0 +1,20 @@
+# Descrição da competição
+
+O **Vinho Verde**, produzido na Região Demarcada dos Vinhos Verdes, em Portugal, constitui uma denominação de origem controlada. Por mais que soe estranho, um Vinho Verde não é verde. Aliás, pode ser tinto, branco ou rosé. E pode, inclusive, ser espumante. O Vinho Verde é único no mundo. Naturalmente leve e fresco, produzido no território do Entre os rios Douro e Minho, no noroeste de Portugal, numa região costeira geograficamente bem localizada para a produção de excelentes vinhos.
+
+![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F3089313%2F0b37432b68f9825a9eb0e0c2a1adabcf%2FVinho-Verde.jpg?generation=1567302568838202&alt=media)
+
+Neste estudo, você descobrirá quais são os componentes químicos mais importantes para se criar um **Vinho Verde de boa qualidade**. Serão consideradas amostras especificamente de vinhos brancos. Ao aplicar ferramentas de aprendizado de máquina, você descobrirá quais são os **componentes** e em quais **proporções** necessários para produzir um vinho de qualidade.
+
+# Sobre o conjunto de dados
+
+O conjunto de dados em questão foi produzido a partir da base **Wine Quality Data Set**, de Paulo Cortez (Universidade do Minho, Portugal), referindo-se exclusivamente à variante branca do Vinho Verde português.
+
+Devido a questões de privacidade e logística, apenas variáveis físico-químicas e sensoriais estão disponíveis nos dados. Por exemplo, não há dados sobre tipos de uvas, marca do vinho, preço de venda, etc.
+
+**Referências:**
+
+- Página oficial do Vinho Verde: http://www.vinhoverde.pt/
+- Paulo Cortez, University of Minho, Guimarães, Portugal, http://www3.dsi.uminho.pt/pcortez
+- A. Cerdeira, F. Almeida, T. Matos and J. Reis, _Viticulture Commission of the Vinho Verde Region (CVRVV)_, Porto, Portugal, 2009
+

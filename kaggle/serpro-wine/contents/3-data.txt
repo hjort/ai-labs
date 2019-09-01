@@ -1,0 +1,45 @@
+Data Description
+================
+
+Os dados foram divididos em dois grupos:
+
+- **conjunto de treinamento** (`wine-train.csv`)
+- **conjunto de testes** (`wine-test.csv`)
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a qualidade do vinho - campo `quality`). Seu modelo preditivo será baseado nos atributos ou *features* (neste caso, as características físico-químicas de cada vinho).
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a qualidade do vinho). É seu trabalho predizer esses resultados. Para cada observação do teste, use o modelo que você treinou para prever quais vinhos são de boa qualidade e quais não são.
+
+Também incluímos o arquivo `wine-example.csv`, um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `wine` (identificação do vinho) e `quality` (a qualidade prevista para o vinho).
+
+## Colunas disponíveis
+
+As colunas neste conjunto de dados são:
+
+- `wine`: identificação única do vinho no conjunto de dados
+- `fixed_acidity`: acidez fixa - a maioria dos ácidos envolvidos no vinho fixos ou não voláteis (que não evaporam rapidamente)
+- `volatile_acidity`: acidez volátil - a quantidade de ácido acético no vinho, que a níveis demasiado elevados pode levar a um sabor desagradável de vinagre
+- `citric_acid`: ácido cítrico - encontrado em pequenas quantidades, o ácido cítrico pode adicionar frescura e sabor aos vinhos
+- `residual_sugar`: açúcar residual - a quantidade de açúcar restante após o fim da fermentação, sendo raro encontrar vinhos com menos de 1 g/L, e vinhos com mais de 45 g/L são considerados doces
+- `chlorides`: cloretos - a quantidade de sal no vinho
+- `free_sulfur_dioxide`: dióxido de enxofre livre - a forma livre de SO2 existe em equilíbrio entre o SO2 molecular (como um gás dissolvido) e o íon bissulfito, impedindo o crescimento microbiano e a oxidação do vinho
+- `total_sulfur_dioxide`: dióxido de enxofre total - quantidade de formas livres e ligadas de SO2, sendo que em baixas concentrações, o SO2 é normalmente indetectável no vinho, mas em concentrações livres de SO2 acima de 50 ppm, o SO2 se torna evidente no nariz e no sabor do vinho
+- `density`: densidade - a densidade do vinho é próxima da água, dependendo do percentual de álcool e açúcar
+- `ph`: pH - descreve quão ácido ou básico é o vinho numa escala de 0 (muito ácido) a 14 (muito básico), sendo que a maioria dos vinhos está entre 3 e 4 na escala de pH
+- `sulphates`: sulfatos - aditivo para vinho que pode contribuir para os níveis de gás dióxido de enxofre (SO2), atuando como antimicrobiano e antioxidante
+- `alcohol`: álcool - o percentual de álcool no vinho
+- `quality`: qualidade - podendo ser boa (`good`) ou ruim (`bad`)
+
+
+Data Sources
+============
+
+example.csv:
+Um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `wine` (a identificação do vinho) e `quality` (a qualidade do vinho).
+
+test.csv:
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a qualidade do vinho).
+
+train.csv:
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a qualidade do vinho - campo `quality`).
+
