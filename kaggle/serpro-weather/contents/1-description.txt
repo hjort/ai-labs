@@ -1,0 +1,22 @@
+# Descrição da competição
+
+Quem de nós não fala um pouco sobre a previsão do tempo de vez em quando? Será que amanhã vai chover e ficar frio de tremer o queixo ou será vai fazer aquele sol de rachar? Será que o aquecimento global existe?
+
+Neste desafio, você aplicará ferramentas de aprendizado de máquina para **prever a temperatura média de uma determinada cidade** baseando-se em dados históricos coletados ao longo de 5 anos.
+
+# Sobre o conjunto de dados
+
+O conjunto de dados em questão foi produzido a partir da base **[Historical Hourly Weather Data](https://www.kaggle.com/selfishgene/historical-hourly-weather-data)**, a qual consiste de cerca de 5 anos de medições horárias de vários atributos climáticos (ex: temperatura, umidade, pressão do ar) de 30 cidades dos EUA e Canadá.
+
+A partir dessa rica base de dados, foi feito um recorte selecionando-se apenas a **cidade de Detroit (EUA)**, destacando somente a **temperatura**, convertendo-a para **graus Celsius** e mantendo apenas **um valor para cada data** (correspondendo à temperatura média durante o dia - período das 9h às 17h).
+
+Adicionalmente, os valores de temperatura sofreram artificialmente um **acréscimo gradual** de alguns graus Celsius ao longo do período disponibilizado. Com isso simularemos um pequeno aquecimento global (ou seria local?)...
+
+Em resumo, o conjunto de dados disponibilizado contém as temperaturas médias diárias (coletadas durante o dia), acrescidas artificialmente de um certo valor, da cidade de Detroit, no período compreendido entre Outubro de 2012 e Novembro de 2017.
+
+O objetivo deste conjunto de dados é **prever o valor da temperatura média diária** artificialmente aquecida de Detroit no período de 17/11/2016 a 29/11/2017. Para tal, serão usados os dados anteriores de temperatura fornecidos para o treinamento (de 01/10/2012 a 16/11/2016).
+
+Vide gráfico na imagem a seguir: os pontos pretos referem-se aos dados reais e a linha azul representa o modelo preditivo (incluindo uma área de confiança).
+
+![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F3089313%2F09dec6fa79971bd4f8c135be3de31c94%2Fplot-ts2.png?generation=1567049499426907&alt=media)
+
