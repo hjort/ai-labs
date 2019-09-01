@@ -1,0 +1,52 @@
+# Sobre o conjunto de dados
+
+O conjunto de dados <a href="https://www.kaggle.com/uciml/zoo-animal-classification">Zoo Animal Classification</a> consiste originalmente em **101 animais de um zoológico** e **16 variáveis ​​com diversas características que os descrevem** (atributos), além da **classe a que cada animal pertence** (alvo).
+
+Os **7 tipos de classe de animais** possíveis são:
+
+1. Mamífero (*Mammal*)
+2. Ave (*Bird*)
+3. Réptil (*Reptile*)
+4. Peixe (*Fish*)
+5. Anfíbio (*Amphibian*)
+6. Inseto (*Bug*)
+7. Invertebrado (*Invertebrate*)
+
+O objetivo deste conjunto de dados é **prever a classe dos animais com base nas características deles**.
+
+## Colunas disponíveis
+As colunas neste conjunto de dados são:
+
+- `animal_name` String: identificação do animal (exclusivo para cada instância)
+- `hair` Boolean: se possui pelos
+- `feathers` Boolean: se possui penas
+- `eggs` Boolean: se bota ovos
+- `milk` Boolean: se produz leite
+- `airborne` Boolean: se voa
+- `aquatic` Boolean: se é aquático
+- `predator` Boolean: se é predador
+- `toothed` Boolean: se possui dentes
+- `backbone` Boolean: se possui espinha dorsal
+- `breathes` Boolean: se possui respiração aérea
+- `venomous` Boolean: se é venenoso
+- `fins` Boolean: se possui barbatanas
+- `legs` Numeric: quantidade de pernas, podendo ser: {0,2,4,5,6,8}
+- `tail` Boolean: se possui rabo
+- `domestic` Boolean: se é doméstico
+- `catsize` Boolean: se é do tamanho de um gato
+- `class_type` Numeric: a classe a qual pertence (inteiro entre 1 e 7)
+
+### Modificações nos dados
+Os campos do tipo *Boolean* contém os valores:
+
+- `y`: (sim / verdadeiro)
+- `n`: (não / falso)
+
+## Linhas adicionais para treino e teste
+
+Além dos **101 animais originais** desse conjunto de dados clássico, são disponibilizados:
+
+- **43 animais** adicionais contendo as respectivas classes (para fins de treino)
+- **70 animais** sem as respectivas classes (para fins de teste/avaliação)
+
+Esses 70 animais a serem avaliados são provenientes de espécies mantidas pelo <a href="http://www.zoologico.com.br/nossos-animais/">Zoológico de São Paulo</a>, sendo prioritariamente animais da fauna brasileira em risco de extinção.

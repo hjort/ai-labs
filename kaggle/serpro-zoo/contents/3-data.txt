@@ -1,0 +1,21 @@
+Os dados foram divididos em três grupos:
+
+- **conjunto de treinamento original** (`zoo-train.csv`)
+- **conjunto de treinamento adicional** (`zoo-train2.csv`)
+- **conjunto de testes** (`zoo-test.csv`)
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a classe do animal - campo `class_type`). Seu modelo preditivo será baseado nos atributos ou *features* (neste caso, as características do animal).
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a classe do animal). É seu trabalho predizer esses resultados. Para cada observação do teste, use o modelo que você treinou para prever qual das sete classes existentes pertence o animal.
+
+Também incluímos o arquivo `zoo-example.csv`, um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `animal_name` (identificação do animal) e `class_type` (classe do animal).
+
+
+Um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `animal_name` (identificação do animal) e `class_type` (classe do animal).
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a classe do animal).
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a classe do animal - campo `class_type`).
+
+Trata-se de um **conjunto de treinamento adicional**, a fim de melhorar a precisão do modelo preditivo.
+

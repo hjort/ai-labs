@@ -1,0 +1,21 @@
+# Objetivo
+
+O objetivo deste desafio é **prever a classe de cada um dos animais** do conjunto de dados com base nos atributos disponíveis. Por exemplo, prever que urso é um mamífero, sapo é um anfíbio e falcão é uma ave.
+
+Entre os atributos, temos a indicação de que o animal possui pelos ou penas, se tem respiração aérea, se é venenoso, se é predador, tem o tamanho de um gato, se é doméstico, quantas pernas possui, se tem rabo, etc.
+
+# Métrica
+
+Sua pontuação é a porcentagem de animais cuja classe que você prevê corretamente. Isso é conhecido simplesmente como precisão.
+
+# Formato do arquivo de submissão
+
+Você deve enviar um arquivo CSV com exatamente 70 registros mais uma linha de cabeçalho (*header*). Seu envio mostrará um erro se você tiver linhas ou colunas extras.
+
+O arquivo deve ter exatamente 2 colunas:
+
+- `animal_name` (classificado em qualquer ordem)
+- `class_type` (contém a previsão da classe: um número inteiro de 1 a 7)
+
+Você pode fazer o download de um arquivo de envio de exemplo (`zoo-example.csv`) na <a href="https://www.kaggle.com/c/serpro-zoo/data">página de dados</a>.
+
