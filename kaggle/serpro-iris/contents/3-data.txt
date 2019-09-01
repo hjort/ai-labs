@@ -1,0 +1,18 @@
+Os dados foram divididos em dois grupos:
+
+- **conjunto de treinamento** (`iris-train.csv`)
+- **conjunto de testes** (`iris-test.csv`)
+
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a espécie da flor - campo `Species`). Seu modelo será baseado nas características ou *features* (neste caso, os comprimentos e larguras da sépala e da pétala da flor).
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a espécie da flor). É seu trabalho predizer esses resultados. Para cada observação do teste, use o modelo que você treinou para prever qual das três espécies existentes pertence a flor.
+
+Também incluímos o arquivo `iris-example.csv`, um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `Id` (identificação da observação) e `Species` (espécie da flor).
+
+
+Um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado.
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a espécie da flor).
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a espécie da flor - campo `Species`). Seu modelo será baseado nas características ou *features* (neste caso, os comprimentos e larguras da sépala e da pétala da flor).

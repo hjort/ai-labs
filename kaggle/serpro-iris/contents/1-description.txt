@@ -1,0 +1,20 @@
+# Sobre o conjunto de dados
+
+O **conjunto de dados Iris** foi usado no clássico artigo de 1936 de R. A. Fisher, <a href="http://rcs.chemometrics.ru/Tutorials/classification/Fisher.pdf">The Use of Multiple Measurements in Taxonomic Problems</a>, e também pode ser encontrado no <a href="http://archive.ics.uci.edu/ml/">UCI Machine Learning Repository</a>.
+
+Ele inclui **três espécies de íris** com 50 amostras cada, bem como algumas propriedades sobre cada flor. Uma espécie de flor é linearmente separável das outras duas, mas as outras duas não são linearmente separáveis umas das outras.
+
+# Colunas disponíveis
+
+As colunas neste conjunto de dados são:
+
+- `Id` (identificação única)
+- `SepalLengthCm` (comprimento da sépala - em centímetros)
+- `SepalWidthCm` (largura da sépala - em centímetros)
+- `PetalLengthCm` (comprimento da pétala - em centímetros)
+- `PetalWidthCm` (largura da pétala - em centímetros)
+- `Species` (nome da espécie)
+
+![Sepal Width vs. Sepal Length][1]
+
+  [1]: https://www.kaggle.io/svf/138327/e401fb2cc596451b1e4d025aaacda95f/sepalWidthvsLength.png
