@@ -1,0 +1,37 @@
+# O que é abalone?
+
+**Abalone** é um gênero de moluscos gastrópodes marinhos da família *Haliotidae* e o único gênero catalogado desta família. Contém diversas espécies em águas costeiras de quase todo o mundo.
+
+O abalone é muito valorizado na **gastronomia** de países asiáticos. Além disso, sua concha é comumente usada na **criação de joias**, especialmente devido ao seu brilho iridescente.
+
+Suas dimensões variam de dois a trinta centímetros. Devido à sua demanda e alto valor econômico, muitas vezes o abalone é colhido em fazendas e, como tal, existe a necessidade de prever a sua idade.
+
+![H. asinina, do Indo-Pacífico, é considerada a espécie-tipo do gênero Haliotis][1]
+
+# Como é calculada a idade de um abalone?
+
+A abordagem tradicional para determinar sua idade é cortando a concha através do cone, manchando-a e contando o número de anéis através de um microscópio - uma tarefa tediosa e demorada.
+
+Algumas medidas físicas, mais fáceis de obter, podem ser usadas para prever a idade de um abalone. Outras informações, como padrões climáticos e localização (portanto, disponibilidade de alimentos) podem ser necessárias para solucionar o problema.
+
+# Sobre o conjunto de dados
+
+O conjunto de dados em questão pode ser usado para obter um **modelo matemático para prever a idade de um abalone a partir de suas medições físicas**.
+
+## Colunas disponíveis
+
+As colunas neste conjunto de dados são:
+
+- `id` (Inteiro): identificação única de cada indivíduo
+- `sex` (String): gênero do indivíduo, pode ser M: macho, F: fêmea e I: infantil
+- `length` (Real): Comprimento - maior medida da concha (em mm)
+- `diameter` (Real): Medida perpendicular ao comprimento (em mm)
+- `height` (Real): Altura com a carne na concha (em mm)
+- `whole_weight` (Real): Peso do abalone inteiro (em g)
+- `shucked_weight` (Real): Peso exclusivo da carne (em g)
+- `viscera_weight` (Real): Peso das vísceras após secagem (em g)
+- `shell_weight` (Real): Peso da concha depois de seca (em g)
+- `rings` (Inteiro): Quantidade de anéis (equivalente à idade em anos)
+
+
+  [1]: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Haliotis_asinina_01.JPG/280px-Haliotis_asinina_01.JPG

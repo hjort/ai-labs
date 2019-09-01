@@ -1,0 +1,26 @@
+# Objetivo
+
+O objetivo deste desafio é **prever a idade aproximada de cada um dos abalones** do conjunto de dados com base nas suas características, especialmente as medidas físicas.
+
+# Métrica
+
+Sua pontuação será calculada a partir da **raiz do erro quadrático médio** (do inglês *root mean square error - RMSE*) sobre os dados enviados.
+
+O desvio da raiz quadrada média ou da raiz quadrada média é uma medida freqüentemente usada das diferenças entre os valores preditos por um modelo ou um estimador e os valores observados.
+
+Maiores informações sobre **RMSE**:
+
+- https://pt.wikipedia.org/wiki/Erro_quadr%C3%A1tico_m%C3%A9dio
+- https://en.wikipedia.org/wiki/Root-mean-square_deviation
+
+# Formato do arquivo de submissão
+
+Você deve enviar um arquivo CSV com exatamente 1393 registros mais uma linha de cabeçalho (*header*). Seu envio mostrará um erro se você tiver linhas ou colunas extras.
+
+O arquivo deve ter exatamente 2 colunas:
+
+- `id` (Inteiro): identificação, classificada em qualquer ordem
+- `rings` (Real): a idade prevista para o abalone, podendo ser um um número decimal
+
+Você pode fazer o download de um arquivo de envio de exemplo (`abalone-example.csv`) na <a href="https://www.kaggle.com/c/serpro-abalone/data">página de dados</a>.
+

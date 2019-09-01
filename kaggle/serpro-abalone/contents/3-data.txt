@@ -1,0 +1,16 @@
+Os dados foram divididos em dois grupos:
+
+- **conjunto de treinamento** (`abalone-train.csv`)
+- **conjunto de testes** (`abalone-test.csv`)
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a idade do abalone - campo `rings`). Seu modelo preditivo será baseado nos atributos ou *features* (neste caso, as características do abalone).
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a idade do abalone). É seu trabalho predizer esses resultados. Para cada observação do teste, use o modelo que você treinou para prever qual a idade aproximada de cada um dos indivíduos.
+
+
+Um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `id` (identificação do abalone) e `rings` (idade do abalone).
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a idade do abalone).
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a idade do abalone - campo `rings`).
+
