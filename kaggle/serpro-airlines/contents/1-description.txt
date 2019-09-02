@@ -1,0 +1,8 @@
+Predict Airline Delays - Uses historical airlines flight data to build multiple classification models to label any flight as either delayed or not delayed.
+
+https://github.com/h2oai/h2o-3/tree/master/h2o-py/demos
+
+Predicting Airline Delay
+Using the estimated regression coefficients, write a function to estimate the predicted delay
+given the carrier, the airport of origin, the destination airport, and the departure time (0 – 24
+hours)

@@ -1,0 +1,69 @@
+Description
+Airline on-time performance data from 1987 to 2008.
+This data set contains on-time performance data from 1987 to 2008.
+Information on flight arrival and departure details for all commercial flights within the USA, from October 1987 to December 2012. 
+
+Time Period
+FlightDate:	flight date
+
+Departure Performance
+DepTime:	actual departure time (stored as decimal float, for example, 12:45 is stored as 12.75)
+CRSDepTime:	scheduled departure time (stored as decimal float, for example, 12:45 is stored as 12.75)
+
+Arrival Performance
+ArrTime:	actual arrival time (stored as decimal float, for example, 12:45 is stored as 12.75)
+CRSArrTime:	scheduled arrival time (stored as decimal float, for example, 12:45 is stored as 12.75)
+
+Airline
+UniqueCarrier:	carrier ID. When the same code has been used by multiple carriers, a numeric suffix is used for earlier users, for example, PA, PA(1), PA(2).
+FlightNum:	flight number
+TailNum:	plane's tail number
+
+Flight Summaries
+ActualElapsedTime:	actual elapsed time of the flight, in minutes. actual elapsed time of flight, in minutes (stored as integer).
+CRSElapsedTime:	scheduled elapsed time of the flight, in minutes. scheduled elapsed time of flight, in minutes (stored as integer).
+AirTime:	airborne time for the flight, in minutes. flight time, in minutes (stored as integer).
+
+Arrival Performance
+ArrDelay:	arrival delay, in minutes. difference in minutes between scheduled and actual arrival time (stored as integer). Early arrivals show negative numbers.
+
+Departure Performance
+DepDelay:	departure delay, in minutes. difference in minutes between scheduled and actual departure time (stored as integer). Early departures show negative numbers.
+
+Origin and Destination
+Origin:		originating airport
+Dest:		destination airport
+
+Flight Summaries
+Distance:	flight distance. distance between airports in miles (stored as integer).
+
+Arrival Performance
+TaxiIn:		taxi time from wheels down to arrival at the gate, in minutes
+
+Departure Performance
+TaxiOut:	taxi time from departure from the gate to wheels up, in minutes
+
+Cancellations and Diversions
+Cancelled:	cancellation status. canceled flight indicator (stored as logical).
+CancellationCode:	cancellation code, if applicable
+Diverted:	diversion status. diverted flight indicator (stored as logical).
+
+Cause of Delay (Data starts 6/2003)
+CarrierDelay:	delay, in minutes, attributable to the carrier
+WeatherDelay:	delay, in minutes, attributable to weather factors
+NASDelay:	delay, in minutes, attributable to the National Aviation System
+SecurityDelay:	delay, in minutes, attributable to security factors
+LateAircraftDelay:	delay, in minutes, attributable to late-arriving aircraft
+
+IsArrDelayed
+IsDepDelayed
+
+Source
+American Statistical Association Statistical Computing Group, Data Expo '09. http://stat-computing.org/dataexpo/2009/the-data.html
+https://docs.microsoft.com/en-us/machine-learning-server/r-reference/revoscaler/airlinedata87to08
+
+U.S. Department of Transportation, Bureau of Transportation Statistics, Research and Innovative Technology Administration. Airline On-Time Statistics. http://www.bts.gov/xml/ontimesummarystatistics/src/index.xml
+
+Data by month can be downloaded as comma-delimited text files from the Research and
+Innovative Technology Administration (RITA) of the Bureau of Transportation Statistics website
+http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236
