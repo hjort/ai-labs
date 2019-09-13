@@ -8,7 +8,7 @@ O compartilhamento privado de código ou dados fora das equipes não é permitid
 
 ## Limites de equipe
 
-O tamanho máximo de equipe é de 1 membro.
+O tamanho máximo de equipe é de 2 membros.
 
 ## Limites de submissão
 
@@ -17,9 +17,21 @@ O tamanho máximo de equipe é de 1 membro.
 
 ## Cronograma da competição
 
-- Data de início: 09/09/2019
+- Data de início: 10/09/2019
 - Prazo de inscrição: nenhum
 - Data de término: nenhuma
+
+## Bases de dados externas
+
+Não é permitida a utilização de bases de dados externas à competição.
+
+## Linguagem de programação
+
+Para a resolução do problema devem ser usadas exclusivamente as linguagens Python ou R.
+
+## Notebooks
+
+Os códigos da resolução devem ser postados sem erros na forma de notebooks ou scripts na seção "Notebooks" e precisam indicar o respectivo escore obtido. Para tal, após o "Commit", deve-se submeter o arquivo CSV resultante após a execução código. O código precisa estar disponível a todos os usuários (i.e., visibilidade "Public").
 
 ## Propósito
 
