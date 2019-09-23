@@ -1,0 +1,7 @@
+Chicago Crime Rate - Uses weather and city statistics to compare arrest rates with the total crimes for each category.
+
+https://github.com/h2oai/h2o-3/blob/master/h2o-py/demos/H2O_chicago_crimes.ipynb
+
+http://docs.h2o.ai/h2o-tutorials/latest-stable/tutorials/pysparkling/Chicago_Crime_Demo.html
+
+
