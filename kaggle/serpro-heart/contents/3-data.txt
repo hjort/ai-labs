@@ -1,0 +1,49 @@
+Data Description
+================
+
+Os dados foram divididos em dois grupos:
+
+- **conjunto de treinamento** (`heart-train.csv`)
+- **conjunto de testes** (`heart-test.csv`)
+
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, o diagnóstico do paciente - campo `Diagnóstico`). Seu modelo preditivo será baseado nos atributos ou *features* (neste caso, os exames clínicos e anamnese de cada paciente).
+
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, o diagnóstico do paciente). É seu trabalho predizer esses resultados. Para cada observação do teste, use o modelo que você treinou para prever quais pacientes possuem doença cardíaca e quais não possuem.
+
+Também incluímos o arquivo `heart-example.csv`, um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `Paciente` (identificação do paciente) e `Diagnóstico` (existência de doença cardíaca).
+
+## Colunas disponíveis
+
+As colunas neste conjunto de dados são:
+
+- `Paciente`: identificação única do paciente no conjunto de dados
+- `Hospital`: identificação do hospital em que a pessoa foi atendida
+- `Idade`: idade (em anos)
+- `Sexo`: sexo (`F`: feminino, `M`: masculino)
+- `TDP`: tipo de dor no peito (1: angina típica, 2: angina atípica, 3: dor não anginal, 4: assintomática)
+- `PAR`: pressão arterial em repouso ao chegar no hospital (em mmHg)
+- `CS`: colesterol sérico (em mg/dL)
+- `ASJ`: açúcar no sangue em jejum > 120 mg/dL (0: não, 1: sim)
+- `ECG`: resultados eletrocardiográficos em repouso (0: normal, 1: anormalidade da onda ST-T, 2: hipertrofia ventricular esquerda)
+- `FCM`: frequência cardíaca máxima alcançada
+- `AIE`: angina induzida por exercício (0: não, 1: sim)
+- `DST`: depressão do segmento ST induzida por exercício em relação ao repouso
+- `IST`: inclinação do segmento ST do pico do exercício (1: subida, 2: plana, 3: descida)
+- `NVP`: número de vasos principais (0 a 3) coloridos por fluoroscopia
+- `Talassemia`: talassemia (3: normal, 6: defeito consertado, 7: defeito reversível)
+- `Diagnóstico`: diagnóstico de doença cardíaca / status da doença angiográfica (`A`: ausência, `P`: presença)
+
+Os valores ausentes estão indicados com o caracter `?`.
+
+Data Sources
+============
+
+example.csv:
+Um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `Paciente` (identificação do paciente) e `Diagnóstico` (existência de doença cardíaca).
+
+test.csv:
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a existência de doença cardíaca).
+
+train.csv:
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a existência de doença cardíaca - campo `Diagnóstico`).
+

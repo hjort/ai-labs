@@ -1,0 +1,35 @@
+## Uma conta por participante
+
+Você não pode se inscrever no Kaggle de várias contas e, portanto, não pode enviar de várias contas.
+
+## Nenhum compartilhamento privado fora das equipes
+
+O compartilhamento privado de código ou dados fora das equipes não é permitido.
+
+## Limites de equipe
+
+O tamanho máximo de equipe é de 1 membro, ou seja, a competição é individual.
+
+## Limites de submissão
+
+- Você pode enviar no máximo 10 resultados por dia.
+- Você pode selecionar até 2 submissões finais para o julgamento.
+
+## Cronograma da competição
+
+- Data de início: 28/10/2019
+- Prazo de inscrição: nenhum
+- Data de término: nenhuma
+
+## Bases de dados externas
+
+Não é permitida a utilização de bases de dados externas à competição.
+
+## Linguagem de programação
+
+Para a resolução do problema devem ser usadas exclusivamente as linguagens Python ou R.
+
+## Notebooks
+
+Os códigos da resolução devem ser postados sem erros na forma de notebooks ou scripts na seção "Notebooks" e precisam indicar o respectivo escore obtido. Para tal, após o "Commit", deve-se submeter o arquivo CSV resultante após a execução código. O código precisa estar disponível a todos os usuários (i.e., visibilidade "Public").
+

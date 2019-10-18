@@ -1,0 +1,26 @@
+# Descrição da competição
+
+**Doença cardíaca** é um termo geral para designar diversas condições médicas crônicas ou agudam que afetam um ou mais componentes do coração. O **coração** é um órgão muscular do tamanho de um punho, que bombeia o sangue através da rede de artérias e veias chamada sistema cardiovascular.
+
+![](https://www.googleapis.com/download/storage/v1/b/kaggle-user-content/o/inbox%2F3089313%2F75677dbacf48f7ceca16aca1b8596fc9%2Fheart-957743.jpg?generation=1571404601719522&alt=media)
+
+A doença cardíaca ocorre quando uma das estruturas do coração não está funcionando corretamente. Eis algumas doenças cardíacas comuns: angina instável e estável, arritmia cardíaca, artrose, aterosclerose, arteriosclerose, cardiomiopatia, cardiopatia congênita, endocardite, estenose mitral, estenose pulmonar, fibrilação atrial, hipertensão, hipotensão, infarto, insuficiência cardíaca, pericardite, prolapso da válvula mitral, sopro no coração, taquicardia ventricular e tumor cardíaco.
+
+Alguns exames podem ser feitos para diagnosticar ou acompanhar doenças cardíacas. Dentre eles, podemos destacar: eletrocardiograma, ecocardiograma, teste ergométrico, cateterismo cardíaco, holter 24 horas e monitor cardíaco portátil.
+
+Neste estudo, você descobrirá quais são os exames clínicos e as condições de saúde mais importantes para se **detectar a existência de doença cardíaca em pacientes**. Serão consideradas amostras de dados de anamnese e exames de pacientes atendidos em quatro hospitais distintos no mundo. Ao aplicar ferramentas de aprendizado de máquina, você descobrirá quais são as **condições de saúde** mais relevantes na detecção de doença cardíaca.
+
+É seu trabalho **prever a existência de doença cardíaca em pacientes** a partir de seus respectivos **exames clínicos e anamneses**. Para cada registro do conjunto de testes, você deve prever um valor `A` (doença ausente) ou `P` (doença presente) para a variável `Diagnóstico`.
+
+
+# Sobre o conjunto de dados
+
+O conjunto de dados em questão foi produzido a partir da base **Heart Disease Data Set**, disponibilizada por David W. Aha mediante trabalho de criação de Andras Janosi (Budapest), William Steinbrunn (Zurich), Matthias Pfisterer (Basel) e Robert Detrano (Long Beach e Cleveland).
+
+
+**Referências:**
+
+- Detrano, R., Janosi, A., Steinbrunn, W., Pfisterer, M., Schmid, J., Sandhu, S., Guppy, K., Lee, S., & Froelicher, V. (1989). _International application of a new probability algorithm for the diagnosis of coronary artery disease._ American Journal of Cardiology, 64, 304-310. http://rexa.info/paper/b884ce2f4aff7ed95ce7bfa7adabaef46b88c60c
+- Aha, D. W. & Kibler, D. (1980). _Instance-based prediction of heart-disease presence with the Cleveland database._ University of California. http://rexa.info/paper/0519d1408b992b21964af4bfe97675987c0caefc
+- Gennari, J. H., Langley, P., & Fisher, D. (1989). _Models of incremental concept formation._ Artificial Intelligence, 40, 11-61. http://rexa.info/paper/faecfadbd4a49f6705e0d3904d6770171b05041f
+
