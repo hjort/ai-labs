@@ -22,7 +22,7 @@ As colunas nos conjuntos de dados `chicago-train.csv` e `chicago-test.csv` são:
 - `ID`: identificação única do registro de ocorrência policial ocorrida em Chicago
 - `Case_Number`: número no Departamento de Polícia de Chicago (_Records Division Number_), exclusivo do incidente
 - `Date_Time`: data e hora em que o incidente ocorreu, pondendo ser uma estimativa
-- `Block`: endereço parcialmente ofuscado (por questões de sigilo) em que o incidente ocorreu, estando no mesmo bloco do endereço real
+- `Block`: endereço parcialmente ofuscado (por questões de sigilo) em que o incidente ocorreu, estando na mesma quadra do endereço real
 - `IUCR`: código do _Illinois Uniform Crime Reporting (IUCR)_, sendo diretamente vinculado aos campos `Primary Type` e `Description`. Vide lista de códigos IUCR em: https://data.cityofchicago.org/d/c7ck-438e
 - `Primary_Type`: descrição principal do código IUCR
 - `Description`: descrição secundária do código IUCR, uma subcategoria da descrição principal
