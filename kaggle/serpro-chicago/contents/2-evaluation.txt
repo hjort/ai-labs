@@ -1,6 +1,6 @@
 # Objetivo
 
-É seu trabalho **prever a qualidade de vinhos** portugueses a partir de suas respectivas **características físico-químicas**. Para cada registro do conjunto de testes, você deve prever um valor `good` (bom) ou `bad` (ruim) para a variável.
+É seu trabalho **prever em quais ocorrências policiais em Chicago houve prisão e em quais não a partir da localização e das características de cada incidente**. Para cada registro do conjunto de testes, você deve prever um valor `YES` (sim) ou `NO` (não) para a variável `Arrest` (prisão).
 
 # Métrica
 
@@ -24,11 +24,12 @@ Maiores informações sobre o **escore F1**:
 
 # Formato do arquivo de submissão
 
-Você deve enviar um arquivo CSV com exatamente 1.633 registros mais uma linha de cabeçalho (*header*). Seu envio mostrará um erro se você tiver linhas ou colunas extras.
+Você deve enviar um arquivo CSV com exatamente 1.500 registros mais uma linha de cabeçalho (*header*). Seu envio mostrará um erro se você tiver linhas ou colunas extras.
 
 O arquivo deve ter exatamente 2 colunas:
 
-- `wine` (Integer): número inteiro que identifica o vinho
-- `quality` (String): a qualidade prevista, podendo ser `good` (bom) ou `bad` (ruim)
+- `ID` (Integer): número inteiro que identifica a ocorrência policial
+- `Arrest` (String): previsão se houve prisão no incidente, podendo ser `YES` (sim) ou `NO` (não)
 
-Você pode fazer o download de um arquivo de envio de exemplo (`wine-example.csv`) na <a href="https://www.kaggle.com/c/serpro-wine/data">página de dados</a>.
+Você pode fazer o download de um arquivo de envio de exemplo (`chicago-example.csv`) na <a href="https://www.kaggle.com/c/serpro-chicago/data">página de dados</a>.
+

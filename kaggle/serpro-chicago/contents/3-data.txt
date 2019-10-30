@@ -1,48 +1,64 @@
 Data Description
 ================
 
-Os dados foram divididos em dois grupos:
+Os dados foram divididos em três grupos:
 
-- **conjunto de treinamento** (`wine-train.csv`)
-- **conjunto de testes** (`wine-test.csv`)
+- **conjunto de treinamento** (`chicago-train.csv`)
+- **conjunto de testes** (`chicago-test.csv`)
+- **conjunto de apoio** (`chicago-census.csv` e `chicago-weather.csv`)
 
-O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a qualidade do vinho - campo `quality`). Seu modelo preditivo será baseado nos atributos ou *features* (neste caso, as características físico-químicas de cada vinho).
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, se houve prisão - campo `Arrest`). Seu modelo preditivo será baseado nos atributos ou *features* (neste caso, a localização e as características de cada ocorrência policial ocorrida em Chicago).
 
-O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a qualidade do vinho). É seu trabalho predizer esses resultados. Para cada observação do teste, use o modelo que você treinou para prever quais vinhos são de boa qualidade e quais não são.
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a indicação de prisão). É seu trabalho predizer esses resultados. Para cada observação do teste, use o modelo que você treinou para prever em quais ocorrências policiais em Chicago houve prisão e em quais não.
 
-Também incluímos o arquivo `wine-example.csv`, um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `wine` (identificação do vinho) e `quality` (a qualidade prevista para o vinho).
+Também incluímos o arquivo `chicago-example.csv`, um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `ID` (identificação da ocorrência policial) e `Arrest` (indicação se houve prisão).
 
-## Colunas disponíveis
+Adicionalmente aos dados principais, é disponibilizado o **conjunto de apoio**, contendo dados de censo (arquivo `chicago-census.csv`) e de temperatura (arquivo `chicago-weather.csv`), ambos referentes à cidade de Chicago.
 
-As colunas neste conjunto de dados são:
+## Colunas disponíveis nos dados principais
 
-- `wine`: identificação única do vinho no conjunto de dados
+As colunas nos conjuntos de dados `chicago-train.csv` e `chicago-test.csv` são:
 
-***************************************************************************************************************
+- `ID`: identificação única do registro de ocorrência policial ocorrida em Chicago
+- `Case_Number`: número no Departamento de Polícia de Chicago (_Records Division Number_), exclusivo do incidente
+- `Date_Time`: data e hora em que o incidente ocorreu, pondendo ser uma estimativa
+- `Block`: endereço parcialmente ofuscado (por questões de sigilo) em que o incidente ocorreu, estando na mesma quadra do endereço real
+- `IUCR`: código do _Illinois Uniform Crime Reporting (IUCR)_, sendo diretamente vinculado aos campos `Primary Type` e `Description`. Vide lista de códigos IUCR em: https://data.cityofchicago.org/d/c7ck-438e
+- `Primary_Type`: descrição principal do código IUCR
+- `Description`: descrição secundária do código IUCR, uma subcategoria da descrição principal
+- `Location_Description`: descrição do local em que o incidente ocorreu
+- `Arrest`: indica se uma prisão foi feita
+- `Domestic`: indica se o incidente foi doméstico, conforme definido em _Illinois Domestic Violence Act_
+- `Beat`: indica a batida onde o incidente ocorreu. Uma batida é a menor área geográfica da polícia - cada batida tem um carro policial dedicado. Três a cinco batidas compõem um setor policial e três setores compõem um distrito policial. O Departamento de Polícia de Chicago possui 22 distritos policiais. Vide lista de batidas em: https://data.cityofchicago.org/d/aerh-rz74
+- `District`: indica o distrito policial onde o incidente ocorreu. Vide lista de distritos em: https://data.cityofchicago.org/d/fthy-xz3r
+- `Ward`: ala (distrito do Conselho da Cidade - _City Council_) onde o incidente ocorreu. Veja a lista de alas em: https://data.cityofchicago.org/d/sp34-6z76
+- `Community_Area`: indica a área comunitária em que o incidente ocorreu. Chicago possui 77 áreas comunitárias. Veja a lista de áreas comunitárias em: https://data.cityofchicago.org/d/cauq-8yn6
+- `FBI_Code`: indica a classificação do crime, conforme descrito no Sistema Nacional de Comunicação de Incidentes do FBI (_FBI's National Incident-Based Reporting System - NIBRS_). Veja a lista dessas classificações, segundo o Departamento de Polícia de Chicago, em: http://gis.chicagopolice.org/clearmap_crime_sums/crime_types.html
+- `Latitude`: latitude do local em que o incidente ocorreu, sendo deslocada do local real (por questões de sigilo), mas dentro do mesmo bloco
+- `Longitude`: longitude do local em que o incidente ocorreu, sendo deslocada do local real (por questões de sigilo), mas dentro do mesmo bloco
 
-Chicago Crime
-chicagoAllWeather, chicagoCensus, and chicagoCrimes10k
+## Colunas disponíveis nos dados de censo
 
-ID - Unique identifier for the record.
-Case Number - The Chicago Police Department RD Number (Records Division Number), which is unique to the incident.
-Date - Date when the incident occurred. this is sometimes a best estimate.
-Block - The partially redacted address where the incident occurred, placing it on the same block as the actual address.
-IUCR - The Illinois Unifrom Crime Reporting code. This is directly linked to the Primary Type and Description. See the list of IUCR codes at https://data.cityofchicago.org/d/c7ck-438e.
-Primary Type - The primary description of the IUCR code.
-Description - The secondary description of the IUCR code, a subcategory of the primary description.
-Location Description - Description of the location where the incident occurred.
-Arrest - Indicates whether an arrest was made.
-Domestic - Indicates whether the incident was domestic-related as defined by the Illinois Domestic Violence Act.
-Beat - Indicates the beat where the incident occurred. A beat is the smallest police geographic area – each beat has a dedicated police beat car. Three to five beats make up a police sector, and three sectors make up a police district. The Chicago Police Department has 22 police districts. See the beats at https://data.cityofchicago.org/d/aerh-rz74.
-District - Indicates the police district where the incident occurred. See the districts at https://data.cityofchicago.org/d/fthy-xz3r.
-Ward - The ward (City Council district) where the incident occurred. See the wards at https://data.cityofchicago.org/d/sp34-6z76.
-Community Area - Indicates the community area where the incident occurred. Chicago has 77 community areas. See the community areas at https://data.cityofchicago.org/d/cauq-8yn6.
-FBI Code - Indicates the crime classification as outlined in the FBI's National Incident-Based Reporting System (NIBRS). See the Chicago Police Department listing of these classifications at http://gis.chicagopolice.org/clearmap_crime_sums/crime_types.html.
-Latitude - The latitude of the location where the incident occurred. This location is shifted from the actual location for partial redaction but falls on the same block.
-Longitude - The longitude of the location where the incident occurred. This location is shifted from the actual location for partial redaction but falls on the same block.
+As colunas no conjunto de dados `chicago-census.csv` são:
 
-Acknowledgements
-I really want to say thank you to the City of Chicago and the Chicago Police Department for making this comprehensive data set available to everyone!
+- `Community Area Number`: identificação única da área comunitária de Chicago
+- `COMMUNITY AREA NAME`: nome da área comunitária
+- `PERCENT OF HOUSING CROWDED`: percentual de moradias superlotadas
+- `PERCENT HOUSEHOLDS BELOW POVERTY`: percentual de famílias abaixo da pobreza
+- `PERCENT AGED 16+ UNEMPLOYED`: percentual de pessoas acima de 16 anos desempregadas
+- `PERCENT AGED 25+ WITHOUT HIGH SCHOOL DIPLOMA`: percentual de pessoas acima de 25 anos sem diploma do ensino médio
+- `PERCENT AGED UNDER 18 OR OVER 64`: percentual de crianças e idosos (pessoas abaixo de 18 e maiores de 64 anos)
+- `PER CAPITA INCOME`: renda per capita anual (em dólares)
+- `HARDSHIP INDEX`: índice de miséria
+
+## Colunas disponíveis nos dados de temperatura
+
+As colunas no conjunto de dados `chicago-weather.csv` são:
+
+- `date`: data da coleta, no formato `M/Ð/YY` (ex: '10/26/14' correspondendo a '26 de Outubro de 2014')
+- `maxTemp`: temperatura máxima registrada no dia (em graus Fahrenheit)
+- `meanTemp`: temperatura média registrada no dia (em graus Fahrenheit)
+- `minTemp`: temperatura mínima registrada no dia (em graus Fahrenheit)
 
 ***************************************************************************************************************
 
@@ -50,11 +66,11 @@ Data Sources
 ============
 
 example.csv:
-Um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `wine` (a identificação do vinho) e `quality` (a qualidade do vinho).
+Um **conjunto de previsões fictício** (com resultados aleatórios), como um exemplo de como deve ser um arquivo de envio (submissão) a ser automaticamente avaliado. Esse arquivo possui apenas dois campos: `ID` (identificação da ocorrência policial) e `Arrest` (indicação se houve prisão).
 
 test.csv:
-O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, a qualidade do vinho).
+O **conjunto de testes** deve ser usado para medir o desempenho do seu modelo em dados desconhecidos. Para o conjunto de testes, não fornecemos a verdade básica para cada observação (neste caso, se houve prisão na ocorrência policial).
 
 train.csv:
-O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, a qualidade do vinho - campo `quality`).
+O **conjunto de treinamento** deve ser usado para construir seus modelos de aprendizado de máquina. Para o conjunto de treinamento, fornecemos o resultado (também conhecido como a “verdade fundamental”) para cada observação (neste caso, se houve prisão na ocorrência - campo `Arrest`).
 
