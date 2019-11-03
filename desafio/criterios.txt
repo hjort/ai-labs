@@ -1,0 +1,13 @@
+Critérios de Avaliação
+
+Impacto:
+Qual o impacto da análise no melhor entendimento das questões de Educação Pública? A análise apresenta ou sugere soluções que afetem um grande número de pessoas ou uma comunidade específica?
+
+Benchmarking:
+A análise abordou algum problema de forma original? Há abordagens semelhantes dentro ou fora do Brasil que agora podem ser comparadas de forma mais precisa? A análise avançou, melhorou, questionou ou negou algum entendimento existente?
+
+Domínio Técnico:
+A análise fez uso de técnicas avançadas ou incomuns? Além do uso das funcionalidades prontas, a análise foi sofisticada com o uso de codificação, modelagem matemática, machine learning ou mineração de dados?
+
+Qualidade Visual:
+A análise é de fácil compreensão? A escolha didática para apresentar os resultados foi eficiente? É possível entender os elementos visuais e interpretá-los de maneira intuitiva?
