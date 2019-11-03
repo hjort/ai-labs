@@ -1,0 +1,253 @@
+Take the 2019 Kaggle Machine Learning and Data Science Survey and prepare for the upcoming analytics challenge!
+https://bit.ly/35mNB07
+
+Who/what are your favorite media sources that report on data science topics? (Select all that apply)
+- Reddit (r/machinelearning, r/datascience, etc)
+- Slack Communities (ods.ai, kagglenoobs, etc)
+- Podcasts (Chai Time Data Science, Linear Digressions, etc)
+- Journal Publications (traditional publications, preprint journals, etc)
+- Kaggle (forums, blog, social media, etc)
+- Hacker News (https://news.ycombinator.com/)
+- Course Forums (forums.fast.ai, etc)
+- YouTube (Cloud AI Adventures, Siraj Raval, etc)
+- Twitter (data science influencers)
+- Blogs (Towards Data Science, Medium, Analytics Vidhya, KDnuggets etc)
+
+On which platforms have you begun or completed data science courses? (Select all that apply)
+- edX
+- Fast.ai
+- University Courses (resulting in a university degree)
+- DataCamp
+- DataQuest
+- Udacity
+- Kaggle Courses (i.e. Kaggle Learn)
+- Coursera
+- Udemy
+- LinkedIn Learning
+
+What is the primary tool that you use at work or school to analyze data? (Include text response)
+- Basic statistical software (Microsoft Excel, Google Sheets, etc.)
+- Advanced statistical software (SPSS, SAS, etc.)
+- Business intelligence software (Salesforce, Tableau, Spotfire, etc.
+- Local development environments (RStudio, JupyterLab, etc.)
+- Cloud-based data software & APIs (AWS, GCP, Azure, etc.)
+
+How long have you been writing code to analyze data (at work or at school)?
+- I have never written code
+- < 1 years
+- 1-2 years
+- 3-5 years
+- 5-10 years
+- 10-20 years
+- 20+ years
+
+Which of the following integrated development environments (IDE's) do you use on a regular basis? (Select all that apply)
+- Jupyter (JupyterLab, Jupyter Notebooks, etc) https://jupyter.org/
+- RStudio https://rstudio.com/
+- PyCharm https://www.jetbrains.com/pycharm/
+- Atom https://ide.atom.io/
+- MATLAB https://www.mathworks.com/products/matlab.html
+- Visual Studio / Visual Studio Code https://code.visualstudio.com/
+- Spyder https://www.spyder-ide.org/
+- Vim / Emacs https://www.vim.org/
+- Notepad++ https://notepad-plus-plus.org/
+- Sublime Text https://www.sublimetext.com/
+
+Which of the following hosted notebook products do you use on a regular basis? (Select all that apply)
+- Google Cloud Notebook Products (AI Platform, Datalab, etc) https://cloud.google.com/ai-platform-notebooks/
+- Paperspace / Gradient https://gradient.paperspace.com/
+- Microsoft Azure Notebooks https://notebooks.azure.com/
+- Kaggle Notebooks (Kernels) https://www.kaggle.com/kernels/
+- AWS Notebook Products (EMR Notebooks, Sagemaker Notebooks, etc) https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html/
+- IBM Watson Studio https://www.ibm.com/cloud/watson-studio/
+- Binder / JupyterHub https://mybinder.org/
+- FloydHub https://www.floydhub.com/
+- Code Ocean https://codeocean.com/
+- Google Colab https://colab.research.google.com/
+
+What programming languages do you use on a regular basis? (Select all that apply)
+- C
+- R
+- Java
+- C++
+- Python
+- Javascript
+- Bash
+- TypeScript
+- MATLAB
+- SQL
+
+What programming language would you recommend an aspiring data scientist to learn first?
+- Python
+- R
+- C++
+- Java
+- Bash
+- MATLAB
+- C
+- SQL
+- TypeScript
+- Javascript
+
+What data visualization libraries or tools do you use on a regular basis? (Select all that apply)
+- Ggplot / ggplot2 https://cran.r-project.org/web/packages/ggplot2/index.html
+- Plotly / Plotly Express https://plot.ly/
+- Altair https://altair-viz.github.io/
+- Shiny https://cran.r-project.org/web/packages/shiny/index.html
+- D3.js https://d3js.org/
+- Seaborn https://seaborn.pydata.org/
+- Matplotlib https://matplotlib.org/
+- Bokeh https://bokeh.pydata.org/en/latest/index.html
+- Leaflet / Folium https://leafletjs.com/
+- Geoplotlib https://github.com/andrea-cuttone/geoplotlib
+
+Which types of specialized hardware do you use on a regular basis? (Select all that apply)
+- CPUs
+- GPUs
+- TPUs
+
+Have you ever used a TPU (tensor processing unit)?
+- Never
+- Once
+- 2-5 times
+- 6-24 times
+- > 25 times
+
+For how many years have you used machine learning methods?
+- < 1 years
+- 1-2 years
+- 2-3 years
+- 3-4 years
+- 4-5 years
+- 5-10 years
+- 10-15 years
+- +20 years
+
+Which of the following ML algorithms do you use on a regular basis? (Select all that apply)
+- Dense Neural Networks (MLPs, etc)
+- Convolutional Neural Networks
+- Recurrent Neural Networks
+- Decision Trees or Random Forests
+- Linear or Logistic Regression
+- Transformer Networks (BERT, gpt-2, etc)
+- Bayesian Approaches
+- Evolutionary Approaches
+- Gradient Boosting Machines (xgboost, lightgbm, etc)
+- Generative Adversarial Networks
+- Other
+
+Which categories of ML tools do you use on a regular basis? (Select all that apply)
+- Automated data augmentation (e.g. imgaug, albumentations)
+- Automated feature engineering/selection (e.g. tpot, boruta_py)
+- Automated model selection (e.g. auto-sklearn, xcessiv)
+- Automated model architecture searches (e.g. darts, enas)
+- Automated hyperparameter tuning (e.g. hyperopt, ray.tune)
+- Automation of full ML pipelines (e.g. Google AutoML, H20 Driverless AI)
+- Other
+- None
+
+Which of the following machine learning frameworks do you use on a regular basis? (Select all that apply)
+- Caret https://cran.r-project.org/web/packages/caret/index.html/
+- TensorFlow https://www.tensorflow.org/
+- Xgboost https://xgboost.readthedocs.io/en/latest/
+- LightGBM https://lightgbm.readthedocs.io/en/latest/
+- Fast.ai https://docs.fast.ai/
+- Scikit-learn https://scikit-learn.org/stable/
+- Spark MLib https://spark.apache.org/mllib/
+- PyTorch https://pytorch.org/
+- RandomForest https://cran.r-project.org/web/packages/randomForest/index.html/
+- Keras https://keras.io/
+- Other
+- None
+
+Which of the following cloud computing platforms do you use on a regular basis? (Select all that apply)
+- IBM Cloud https://www.ibm.com/cloud/
+- Microsoft Azure https://azure.microsoft.com/en-us/
+- Amazon Web Services (AWS) https://aws.amazon.com/
+- Salesforce Cloud https://www.salesforce.com/products/sales-cloud/features/
+- VMware Cloud https://cloud.vmware.com/
+- Red Hat Cloud https://www.redhat.com/en/technologies/cloud-computing/cloud-suite/
+- Google Cloud Platform (GCP) https://cloud.google.com/gcp/
+- Oracle Cloud https://www.oracle.com/cloud/
+- Alibaba Cloud https://us.alibabacloud.com/
+- SAP Cloud https://cloudplatform.sap.com/index.html/
+- Other
+- None
+
+Which specific cloud computing products do you use on a regular basis? (Select all that apply)
+- Google Kubernetes Engine https://cloud.google.com/kubernetes-engine/
+- Google Compute Engine (GCE) https://cloud.google.com/compute/
+- AWS Elastic Beanstalk https://aws.amazon.com/elasticbeanstalk/
+- Azure Container Service https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft.acs
+- Google App Engine https://cloud.google.com/appengine/
+- Azure Virtual Machines https://azure.microsoft.com/en-us/services/virtual-machines/
+- AWS Batch https://aws.amazon.com/batch/
+- Google Cloud Functions https://cloud.google.com/functions/
+- AWS Elastic Compute Cloud (EC2) https://aws.amazon.com/ec2/
+- AWS Lambda https://aws.amazon.com/lambda/
+- Other
+- None
+
+Which specific big data / analytics products do you use on a regular basis? (Select all that apply)
+- AWS Kinesis https://aws.amazon.com/kinesis/
+- Microsoft Analysis Services https://azure.microsoft.com/en-us/services/analysis-services/
+- Teradata https://www.teradata.com/
+- AWS Athena https://aws.amazon.com/athena/
+- Google BigQuery https://cloud.google.com/bigquery/
+- AWS Redshift https://aws.amazon.com/redshift/
+- Databricks https://databricks.com/
+- Google Cloud Dataflow https://cloud.google.com/dataflow/
+- Google Cloud Pub/Sub https://cloud.google.com/pubsub/docs/
+- AWS Elastic MapReduce https://aws.amazon.com/emr/
+- Other
+- None
+
+Which of the following machine learning products do you use on a regular basis? (Select all that apply)
+- Google Cloud Speech-to-Text https://cloud.google.com/speech-to-text/
+- Amazon SageMaker https://aws.amazon.com/sagemaker/
+- Google Cloud Translation https://cloud.google.com/translate/
+- Azure Machine Learning Studio https://studio.azureml.net/
+- Google Cloud Machine Learning Engine https://cloud.google.com/ml-engine/
+- RapidMiner https://rapidminer.com/
+- Cloudera https://www.cloudera.com/
+- Google Cloud Vision https://cloud.google.com/vision/
+- Google Cloud Natural Language https://cloud.google.com/natural-language/
+- SAS https://www.sas.com/en_us/home.html
+- Other
+- None
+
+Which automated machine learning tools (or partial AutoML tools) do you use on a regular basis? (Select all that apply)
+- Auto_ml https://github.com/ClimbsRocks/auto_ml/
+- DataRobot AutoML https://www.datarobot.com/lp/automated-machine-learning-works-business/
+- MLbox https://github.com/AxeldeRomblay/MLBox/
+- Tpot https://github.com/EpistasisLab/tpot/
+- H20 Driverless AI https://www.h2o.ai/products/h2o-driverless-ai/
+- Google AutoML https://cloud.google.com/automl/
+- Xcessiv https://github.com/reiinakano/xcessiv/
+- Databricks AutoML https://databricks.com/product/automl-on-databricks/
+- Auto-Keras https://github.com/keras-team/autokeras/
+- Auto-Sklearn https://github.com/automl/auto-sklearn/
+- Other
+- None
+
+Which of the following relational database products do you use on a regular basis? (Select all that apply)
+- AWS DynamoDB http://AWS DynamoDB
+- Azure SQL Database https://azure.microsoft.com/en-us/services/sql-database/
+- Google Cloud SQL https://cloud.google.com/sql/docs/
+- MySQL https://www.mysql.com/
+- Microsoft Access https://products.office.com/en-us/access/
+- PostgresSQL https://www.postgresql.org/
+- Microsoft SQL Server http://Microsoft SQL Server
+- AWS Relational Database Service https://aws.amazon.com/rds/
+- Oracle Database https://www.oracle.com/database/index.html
+- SQLite https://www.sqlite.org/
+- Other
+- None
+
+Congratulations, you finished the survey!
+
+Thank you for participating in the 2019 Kaggle Machine Learning and Data Science Survey!  As an additional thank-you all survey participants will be the first ones to receive an email with the survey’s results.
+
+Thanks again!
+The Kaggle Team
+
