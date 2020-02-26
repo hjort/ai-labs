@@ -92,19 +92,19 @@ item_cnt_monthly_sum = df_train2.groupby(
 item_cnt_monthly_sum
 
 
-# In[14]:
+# In[12]:
 
 
 type(item_price_monthly_mean)
 
 
-# In[15]:
+# In[13]:
 
 
 type(item_cnt_monthly_sum)
 
 
-# In[18]:
+# In[14]:
 
 
 item_monthly = pd.concat([item_price_monthly_mean, item_cnt_monthly_sum], axis=1)
@@ -116,14 +116,14 @@ item_monthly = pd.concat([item_price_monthly_mean, item_cnt_monthly_sum], axis=1
 item_monthly.head()
 
 
-# In[19]:
+# In[15]:
 
 
 del(item_price_monthly_mean)
 del(item_cnt_monthly_sum)
 
 
-# In[20]:
+# In[16]:
 
 
 item_monthly.rename(columns={
@@ -132,38 +132,38 @@ item_monthly.rename(columns={
 item_monthly.head()
 
 
-# In[21]:
+# In[17]:
 
 
 item_monthly.info()
 
 
-# In[22]:
+# In[18]:
 
 
 item_monthly.describe().T
 
 
-# In[23]:
+# In[19]:
 
 
 item_monthly.index.names
 
 
-# In[24]:
+# In[20]:
 
 
 item_monthly.to_csv('sales_monthly.csv')
 
 
-# In[25]:
+# In[21]:
 
 
 get_ipython().system('head sales_monthly.csv')
 
 
-# In[ ]:
+# In[22]:
 
 
-
+get_ipython().system('rm -f sales_monthly.csv.bz2 && bzip2 -9 sales_monthly.csv')
 

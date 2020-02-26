@@ -128,9 +128,15 @@ df_shops.to_csv('shops_full.csv')
 get_ipython().system('head shops_full.csv')
 
 
+# In[15]:
+
+
+get_ipython().system('rm -f shops_full.csv.bz2 && bzip2 -9 shops_full.csv')
+
+
 # ## Item categories
 
-# In[15]:
+# In[16]:
 
 
 df_categories = pd.read_csv(
@@ -140,7 +146,7 @@ print('shape:', df_categories.shape)
 df_categories.head()
 
 
-# In[16]:
+# In[17]:
 
 
 df_categories.describe()
@@ -152,7 +158,7 @@ df_categories.describe()
 # - 'Карты оплаты - Windows (Цифра)' => 'Карты оплаты'
 # - 'Книги - Комиксы, манга' => 'Книги'
 
-# In[17]:
+# In[18]:
 
 
 df_categories['group_name'] =     df_categories['item_category_name' + trcol].apply(
@@ -161,13 +167,13 @@ df_categories['group_name'] =     df_categories['item_category_name' + trcol].ap
 df_categories.head()
 
 
-# In[18]:
+# In[19]:
 
 
 df_categories.groupby('group_name').count().    sort_values(by='item_category_name', ascending=False).head()
 
 
-# In[19]:
+# In[20]:
 
 
 def extract_subgroup(s):
@@ -185,13 +191,13 @@ df_categories['subgroup_name'] =     df_categories['item_category_name' + trcol]
 df_categories.head()
 
 
-# In[20]:
+# In[21]:
 
 
 df_categories.groupby('subgroup_name').count().head(10)
 
 
-# In[21]:
+# In[22]:
 
 
 df_categories['group_code'] = (
@@ -203,13 +209,13 @@ df_categories['subgroup_code'] = (
 df_categories.head()
 
 
-# In[22]:
+# In[23]:
 
 
 df_categories.info()
 
 
-# In[23]:
+# In[24]:
 
 
 df_categories.describe()
@@ -217,7 +223,7 @@ df_categories.describe()
 
 # ## Items
 
-# In[24]:
+# In[25]:
 
 
 df_items = pd.read_csv(
@@ -227,20 +233,20 @@ print('shape:', df_items.shape)
 df_items.head()
 
 
-# In[25]:
+# In[26]:
 
 
 #if not translate:
 #    df_items['item_category_id'] = df_items['item_category_id'].astype('category')
 
 
-# In[26]:
+# In[27]:
 
 
 df_items.describe()
 
 
-# In[27]:
+# In[28]:
 
 
 import re
@@ -267,19 +273,19 @@ df_items['subject_name'] =     df_items['item_name' + trcol].apply(
 df_items.head()
 
 
-# In[28]:
+# In[29]:
 
 
 df_items.tail()
 
 
-# In[29]:
+# In[30]:
 
 
 df_items.groupby('subject_name').count().head(10)
 
 
-# In[30]:
+# In[31]:
 
 
 df_items['subject_code'] = (
@@ -288,25 +294,25 @@ df_items['subject_code'] = (
 df_items.head()
 
 
-# In[31]:
+# In[32]:
 
 
 df_items.tail()
 
 
-# In[32]:
+# In[33]:
 
 
 df_items.info()
 
 
-# In[33]:
+# In[34]:
 
 
 df_items.describe()
 
 
-# In[34]:
+# In[35]:
 
 
 # join items + categories:item_category_id => group_code, subgroup_code
@@ -316,40 +322,46 @@ df_items2.index.names = ['item_id']
 df_items2.head()
 
 
-# In[35]:
+# In[36]:
 
 
 del(df_items)
 del(df_categories)
 
 
-# In[36]:
+# In[37]:
 
 
 #df_items2.set_index(['item_id'], inplace=True)
 df_items2['item_category_id'] = df_items2['item_category_id'].astype('category')
 
 
-# In[37]:
+# In[38]:
 
 
 df_items2.info()
 
 
-# In[38]:
+# In[39]:
 
 
 df_items2.describe()
 
 
-# In[39]:
+# In[40]:
 
 
 df_items2.to_csv('items_full.csv')
 
 
-# In[40]:
+# In[41]:
 
 
 get_ipython().system('head items_full.csv')
+
+
+# In[42]:
+
+
+get_ipython().system('rm -f items_full.csv.bz2 && bzip2 -9 items_full.csv')
 
