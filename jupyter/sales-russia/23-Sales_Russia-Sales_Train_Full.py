@@ -271,8 +271,47 @@ df_train3.head(10)
 df_train3.to_csv('train_full.csv')
 
 
-# In[ ]:
+# In[34]:
 
 
+get_ipython().system('head train_full.csv')
 
+
+# In[35]:
+
+
+get_ipython().system('rm -f train_full.csv.bz2 && bzip2 -9 train_full.csv')
+
+
+# ## Sales (monthly full)
+
+# In[36]:
+
+
+df_test.head()
+
+
+# In[37]:
+
+
+df_monthly.head()
+
+
+# In[38]:
+
+
+df_monthly2 = df_monthly.join(df_shops).join(df_items)
+df_monthly2.head()
+
+
+# In[39]:
+
+
+df_monthly2.to_csv('sales_monthly_full.csv')
+
+
+# In[40]:
+
+
+get_ipython().system('rm -f sales_monthly_full.csv.bz2 && bzip2 -9 sales_monthly_full.csv')
 
