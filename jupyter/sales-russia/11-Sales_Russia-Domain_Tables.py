@@ -13,7 +13,7 @@
 # - shops.csv
 # - test.csv
 
-# In[1]:
+# In[2]:
 
 
 # importar pacotes necessários
@@ -21,7 +21,7 @@ import numpy as np
 import pandas as pd
 
 
-# In[2]:
+# In[3]:
 
 
 # definir parâmetros extras
@@ -364,4 +364,72 @@ get_ipython().system('head items_full.csv')
 
 
 get_ipython().system('rm -f items_full.csv.bz2 && bzip2 -9 items_full.csv')
+
+
+# ## Date Blocks
+
+# In[34]:
+
+
+# criar dataframe com possíveis meses
+df_dates = pd.DataFrame({'last_date': pd.date_range(start='2013-01-01', periods=35, freq='M')})
+df_dates.index.names = ['date_block_num']
+df_dates['first_date'] = df_dates['last_date'].values.astype('datetime64[M]')
+df_dates['days_count'] = ((df_dates['last_date'] - df_dates['first_date']).dt.days + 1).astype(np.int8)
+df_dates['year'] = df_dates['last_date'].dt.year
+df_dates['month'] = df_dates['last_date'].dt.month
+df_dates.head()
+
+
+# In[35]:
+
+
+df_dates.tail()
+
+
+# In[36]:
+
+
+df_dates.info()
+
+# criar colunas ano e mês
+df_dates['year'] = df_dates['date'].dt.year
+df_dates['month'] = df_dates['date'].dt.month
+df_dates['last_day'] = df_dates['date'].dt.day
+df_dates.head()
+# In[37]:
+
+
+#TODO: criar colunas sun_cnt, mon_cnt, ..., sat_cnt
+
+from datetime import date
+dt = date(2013, 5, 1)
+dtdef count_weekdays(year, month, last_day):
+    weekdays = np.zeros((7,), dtype=np.int8)
+    for day in range(1, last_day + 1):
+        dt = date(year, month, day)
+        wd = dt.weekday()
+        weekdays[wd] += 1
+        #print(dt, wd)
+    return weekdays
+
+#wd = count_weekdays(2013, 1, 31)
+#print(wd)#df_dates['sun_cnt'] = df_dates.apply()
+df_dates.apply(lambda x: count_weekdays(x.year, x.month, x.last_day))
+# In[38]:
+
+
+df_dates.to_csv('date_blocks.csv')
+
+
+# In[39]:
+
+
+get_ipython().system('head date_blocks.csv')
+
+
+# In[ ]:
+
+
+
 
