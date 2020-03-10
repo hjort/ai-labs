@@ -77,6 +77,8 @@ resultadoAdaBoost = fit_and_predict("AdaBoostClassifier", modeloAdaBoost, treino
      teste_dados, teste_marcacoes)
 resultados[resultadoAdaBoost] = modeloAdaBoost
 
+print("\nResultados:\n", resultados, "\n")
+
 maximo = max(resultados)
 vencedor = resultados[maximo]
 
