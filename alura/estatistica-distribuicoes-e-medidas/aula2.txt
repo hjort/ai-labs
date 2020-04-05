@@ -1,0 +1,8 @@
+Nesta aula, aprendemos:
+
+A criar distribuições de frequências (tabelas de frequências) com a função value_counts() do pandas.
+A criar distribuições de frequências, com o cruzamento de duas variáveis, utilizando a função crosstab() do pandas.
+A criar distribuições de frequências, com classes personalizadas, utilizando as funções value_counts() e cut() conjuntamente.
+A utilizar a regra de Sturges para obter um número de classes ótimo para determinado tamanho de amostra.
+A plotar o histograma, que é a representação gráfica de uma distribuição de frequências.
+

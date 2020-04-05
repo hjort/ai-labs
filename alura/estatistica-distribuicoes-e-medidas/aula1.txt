@@ -1,0 +1,7 @@
+Nesta aula, aprendemos:
+
+A identificar a versão de uma biblioteca do Python.
+A ler um dataset no formato CSV e criar um DataFrame pandas, com o conteúdo deste dataset.
+A identificar e classificar as variáveis de um dataset como quantitativas ou qualitativas.
+Que as variáveis qualitativas se dividem em ordinais e nominais.
+Que as variáveis quantitativas se dividem em discretas e contínuas.
