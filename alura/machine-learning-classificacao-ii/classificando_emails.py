@@ -17,11 +17,14 @@ dicionario = set()
 for lista in textosQuebrados:
     dicionario.update(lista)
 
+print("dicionario:", dicionario)
+
 totalDePalavras = len(dicionario)
 tuplas = zip(dicionario, range(totalDePalavras))
 tradutor = {palavra: indice for palavra, indice in tuplas}
-print(totalDePalavras)
 
+print("total de palavras:", totalDePalavras)
+print("tradutor:", tradutor)
 
 def vetorizar_texto(texto, tradutor):
     vetor = [0] * len(tradutor)
@@ -29,11 +32,11 @@ def vetorizar_texto(texto, tradutor):
         if palavra in tradutor:
             posicao = tradutor[palavra]
             vetor[posicao] += 1
-
     return vetor
 
-
 vetoresDeTexto = [vetorizar_texto(texto, tradutor) for texto in textosQuebrados]
+
+print("vetores de texto:", vetoresDeTexto[:1])
 
 marcas = classificacoes['classificacao']
 
@@ -45,14 +48,13 @@ porcentagem_de_treino = 0.8
 tamanho_de_treino = int(porcentagem_de_treino * len(Y))
 tamanho_de_validacao = len(Y) - tamanho_de_treino
 
-print(tamanho_de_treino)
+print("tamanho de treino:", tamanho_de_treino)
 
 treino_dados = X[0:tamanho_de_treino]
 treino_marcacoes = Y[0:tamanho_de_treino]
 
 validacao_dados = X[tamanho_de_treino:]
 validacao_marcacoes = Y[tamanho_de_treino:]
-
 
 def fit_and_predict(nome, modelo, treino_dados, treino_marcacoes):
     k = 10
@@ -61,7 +63,6 @@ def fit_and_predict(nome, modelo, treino_dados, treino_marcacoes):
     msg = "Taxa de acerto do {0}: {1}".format(nome, taxa_de_acerto)
     print(msg)
     return taxa_de_acerto
-
 
 def teste_real(modelo, validacao_dados, validacao_marcacoes):
     resultado = modelo.predict(validacao_dados)
@@ -85,7 +86,6 @@ modeloOneVsRest = OneVsRestClassifier(LinearSVC(random_state=0))
 resultadoOneVsRest = fit_and_predict("OneVsRest", modeloOneVsRest, treino_dados, treino_marcacoes)
 resultados[resultadoOneVsRest] = modeloOneVsRest
 
-
 from sklearn.multiclass import OneVsOneClassifier
 
 modeloOneVsOne = OneVsOneClassifier(LinearSVC(random_state=0))
@@ -104,13 +104,12 @@ modeloAdaBoost = AdaBoostClassifier(random_state=0)
 resultadoAdaBoost = fit_and_predict("AdaBoostClassifier", modeloAdaBoost, treino_dados, treino_marcacoes)
 resultados[resultadoAdaBoost] = modeloAdaBoost
 
-
-print(resultados)
+print("resultados:\n", resultados)
 
 maximo = max(resultados)
 vencedor = resultados[maximo]
 
-print("Vencerdor: ")
+print("Vencedor:")
 print(vencedor)
 
 vencedor.fit(treino_dados, treino_marcacoes)
@@ -123,3 +122,4 @@ print("Taxa de acerto base: %f" % taxa_de_acerto_base)
 
 total_de_elementos = len(validacao_dados)
 print("Total de teste: %d" % total_de_elementos)
+
