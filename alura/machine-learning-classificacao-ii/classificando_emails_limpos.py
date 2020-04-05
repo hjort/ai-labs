@@ -1,33 +1,37 @@
 #!-*- coding: utf8 -*-
 
+# pip install nltk
+
 import pandas as pd
 from collections import Counter
 import numpy as np
 from sklearn.model_selection import cross_val_score
 import nltk
 
+# nltk.download("punkt")
+
 classificacoes = pd.read_csv('emails.csv')
 textosPuros = classificacoes['email']
 frases = textosPuros.str.lower()
 textosQuebrados = [nltk.tokenize.word_tokenize(frase) for frase in frases]
 
+# nltk.download('stopwords')
 stopwords = nltk.corpus.stopwords.words('portuguese')
 
+# nltk.download('rslp')
 stemmer = nltk.stem.RSLPStemmer()
 
 dicionario = set()
-
 for lista in textosQuebrados:
     validas = [stemmer.stem(palavra) for palavra in lista if palavra not in stopwords and len(palavra) > 2]
     dicionario.update(validas)
 
-
 totalDePalavras = len(dicionario)
-print(totalDePalavras)
-print(dicionario)
+print("total de palavras:", totalDePalavras)
+print("dicionario:", dicionario)
+
 tuplas = zip(dicionario, range(totalDePalavras))
 tradutor = {palavra: indice for palavra, indice in tuplas}
-
 
 def vetorizar_texto(texto, tradutor, stemmer):
     vetor = [0] * len(tradutor)
@@ -39,9 +43,7 @@ def vetorizar_texto(texto, tradutor, stemmer):
                 vetor[posicao] += 1
     return vetor
 
-
 vetoresDeTexto = [vetorizar_texto(texto, tradutor, stemmer) for texto in textosQuebrados]
-
 
 marcas = classificacoes['classificacao']
 
@@ -53,13 +55,11 @@ porcentagem_de_treino = 0.8
 tamanho_de_treino = int(porcentagem_de_treino * len(Y))
 tamanho_de_validacao = len(Y) - tamanho_de_treino
 
-
 treino_dados = X[0:tamanho_de_treino]
 treino_marcacoes = Y[0:tamanho_de_treino]
 
 validacao_dados = X[tamanho_de_treino:]
 validacao_marcacoes = Y[tamanho_de_treino:]
-
 
 def fit_and_predict(nome, modelo, treino_dados, treino_marcacoes):
     k = 10
@@ -69,11 +69,10 @@ def fit_and_predict(nome, modelo, treino_dados, treino_marcacoes):
     print(msg)
     return taxa_de_acerto
 
-
 def teste_real(modelo, validacao_dados, validacao_marcacoes):
     resultado = modelo.predict(validacao_dados)
 
-    acertos = resultado == validacao_marcacoes
+    acertos = (resultado == validacao_marcacoes)
 
     total_de_acertos = sum(acertos)
     total_de_elementos = len(validacao_marcacoes)
@@ -87,37 +86,32 @@ resultados = {}
 
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.svm import LinearSVC
-
 modeloOneVsRest = OneVsRestClassifier(LinearSVC(random_state=0))
 resultadoOneVsRest = fit_and_predict("OneVsRest", modeloOneVsRest, treino_dados, treino_marcacoes)
 resultados[resultadoOneVsRest] = modeloOneVsRest
 
-
 from sklearn.multiclass import OneVsOneClassifier
-
 modeloOneVsOne = OneVsOneClassifier(LinearSVC(random_state=0))
 resultadoOneVsOne = fit_and_predict("OneVsOne", modeloOneVsOne, treino_dados, treino_marcacoes)
 resultados[resultadoOneVsOne] = modeloOneVsOne
 
 from sklearn.naive_bayes import MultinomialNB
-
 modeloMultinomial = MultinomialNB()
 resultadoMultinomial = fit_and_predict("MultinomialNB", modeloMultinomial, treino_dados, treino_marcacoes)
 resultados[resultadoMultinomial] = modeloMultinomial
 
 from sklearn.ensemble import AdaBoostClassifier
-
 modeloAdaBoost = AdaBoostClassifier(random_state=0)
 resultadoAdaBoost = fit_and_predict("AdaBoostClassifier", modeloAdaBoost, treino_dados, treino_marcacoes)
 resultados[resultadoAdaBoost] = modeloAdaBoost
 
-
+print("Resultados:")
 print(resultados)
 
 maximo = max(resultados)
 vencedor = resultados[maximo]
 
-print("Vencerdor: ")
+print("\nVencedor: ")
 print(vencedor)
 
 vencedor.fit(treino_dados, treino_marcacoes)
@@ -130,3 +124,4 @@ print("Taxa de acerto base: %f" % taxa_de_acerto_base)
 
 total_de_elementos = len(validacao_dados)
 print("Total de teste: %d" % total_de_elementos)
+
