@@ -1,0 +1,4 @@
+Nesta aula, aprendemos:
+
+A calcular as principais medidas de tendência central: média aritmética, mediana e moda.
+A identificar características importantes de uma distribuição, como a presença de assimetria e sua direção a partir da relação entre as medidas de tendência central.
