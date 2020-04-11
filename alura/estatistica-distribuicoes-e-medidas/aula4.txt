@@ -1,0 +1,6 @@
+Nesta aula, aprendemos:
+
+A obter os quartis, decis e percentis de uma distribuição
+Também conhecidas como medidas separatrizes, pois dividem uma distribuição em partes iguais.
+A construir e interpretar um boxplot, com a utilização dos quartis.
+
