@@ -1,0 +1,5 @@
+Nesta aula, aprendemos:
+
+A realizar uma análise descritiva em um conjunto de dados.
+Funcionalidades extras da função crosstab() com o parâmetro aggfunc.
+A construir boxplots com o cruzamento de três informações distintas.
